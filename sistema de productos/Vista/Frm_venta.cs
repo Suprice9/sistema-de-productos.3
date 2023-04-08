@@ -48,8 +48,9 @@ namespace sistema_de_productos.Vista
                 escribir.WriteLine("---------------------");
                 escribir.WriteLine("Fecha: " + lblFecha.Text);
                 escribir.WriteLine("---------------------");
-                escribir.WriteLine("producto: " + txtIdProducto.Text);
-                escribir.WriteLine("cantidad: " + txtCantidad.Text);
+                escribir.WriteLine("cliente: " + TxtNombreCliente.Text);
+                escribir.WriteLine("producto: " + txtNombreProducto.Text);
+                escribir.WriteLine("cantidad: " + numerictext.Text);
                 escribir.WriteLine("Total a pagar: " + lblCostoApagar.Text);
 
 

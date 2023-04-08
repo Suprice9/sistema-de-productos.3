@@ -70,7 +70,7 @@ namespace sistema_de_productos
             command.Parameters.AddWithValue("@descripcion", txt_descripcion.Text);
             command.Parameters.AddWithValue("@preciocompra", txt_precio_compra.Text);
             command.Parameters.AddWithValue("@precioventa", txt_venta_compra.Text);
-            command.Parameters.AddWithValue("@fechavencimiento", txt_fecha_compra.Text);
+            command.Parameters.AddWithValue("@fechavencimiento", datatimeVencimiento.Value);
             command.Parameters.AddWithValue("@cantidad", txt_cantidad_compra.Text);
 
             // Ejecutar la consulta
@@ -86,7 +86,7 @@ namespace sistema_de_productos
 
             
             //inidcicamos donde querenos guardar el archivo que sera nuestro reporte
-            StreamWriter escribir = new StreamWriter(@"C:\Users\enman\Desktop\Hoy\FarmaProg-master3\FarmaProg-master2\sistema de productos\reportes\Factura de compra\reporte de compra.txt", true);
+            StreamWriter escribir = new StreamWriter(@"E:\Programas\sistema-de-productos.2-Pruebas2\sistema de productos\reportes\Factura de compra\reporte de compra.txt", true);
             try
             {
                 escribir.WriteLine("   FarmaProg ");
@@ -103,7 +103,7 @@ namespace sistema_de_productos
             escribir.WriteLine("cantidad: " + txt_cantidad_compra.Text);
             escribir.WriteLine("Precio de compra: " +  txt_precio_compra.Text);
             escribir.WriteLine("Precio de venta: " + txt_venta_compra.Text);
-            escribir.WriteLine("Fecha de vencimiento: " + txt_fecha_compra.Text);
+            escribir.WriteLine("Fecha de vencimiento: " + datatimeVencimiento.Value);
                 
 
 
@@ -130,7 +130,7 @@ namespace sistema_de_productos
             string valor3 = txt_descripcion.Text;     // Recupera el valor del tercero TextBox
             string valor4 = txt_precio_compra.Text;   // Recupera el valor del cuarto TextBox
             string valor5 = txt_venta_compra.Text;    // Recupera el valor del quinto TextBox
-            string valor6 = txt_fecha_compra.Text;    // Recupera el valor del sexto TextBox
+            DateTime valor6 =Convert.ToDateTime(datatimeVencimiento.Value);    // Recupera el valor del sexto TextBox
             string valor7 = txt_cantidad_compra.Text; // Recupera el valor del septimo TextBox
 
             DataGridViewRow fila = new DataGridViewRow();

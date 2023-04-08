@@ -75,7 +75,7 @@ string texto1 = textBox2.Text;//este esta nitido es que voy a probar otro
 
         private void button1_Click(object sender, EventArgs e)
         {
-            TextReader leer = new StreamReader(@"E:\Programas\FarmaProg-master2\sistema de productos\reportes\Reporte de medicamentos\reportes.txt");
+            TextReader leer = new StreamReader(@"E:\Programas\sistema-de-productos.2-Pruebas2\sistema de productos\reportes\Reporte de medicamentos\reportes.txt");
             MessageBox.Show(leer.ReadToEnd());
           }
     }

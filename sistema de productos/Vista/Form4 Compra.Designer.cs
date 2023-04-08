@@ -52,12 +52,12 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txt_precio_compra = new System.Windows.Forms.TextBox();
             this.txt_venta_compra = new System.Windows.Forms.TextBox();
-            this.txt_fecha_compra = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.cmbSuplidor = new System.Windows.Forms.ComboBox();
             this.btnAgregarSuplidor = new System.Windows.Forms.Button();
+            this.datatimeVencimiento = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -124,7 +124,7 @@
             // 
             this.bnt_agregarlista.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bnt_agregarlista.Location = new System.Drawing.Point(16, 422);
-            this.bnt_agregarlista.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bnt_agregarlista.Margin = new System.Windows.Forms.Padding(2);
             this.bnt_agregarlista.Name = "bnt_agregarlista";
             this.bnt_agregarlista.Size = new System.Drawing.Size(122, 31);
             this.bnt_agregarlista.TabIndex = 5;
@@ -136,7 +136,7 @@
             // 
             this.btn_compra.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_compra.Location = new System.Drawing.Point(162, 422);
-            this.btn_compra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_compra.Margin = new System.Windows.Forms.Padding(2);
             this.btn_compra.Name = "btn_compra";
             this.btn_compra.Size = new System.Drawing.Size(122, 31);
             this.btn_compra.TabIndex = 6;
@@ -147,7 +147,7 @@
             // txt_producto_compra
             // 
             this.txt_producto_compra.Location = new System.Drawing.Point(104, 175);
-            this.txt_producto_compra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_producto_compra.Margin = new System.Windows.Forms.Padding(2);
             this.txt_producto_compra.Name = "txt_producto_compra";
             this.txt_producto_compra.Size = new System.Drawing.Size(120, 20);
             this.txt_producto_compra.TabIndex = 8;
@@ -155,7 +155,7 @@
             // txt_descripcion
             // 
             this.txt_descripcion.Location = new System.Drawing.Point(114, 210);
-            this.txt_descripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_descripcion.Margin = new System.Windows.Forms.Padding(2);
             this.txt_descripcion.Name = "txt_descripcion";
             this.txt_descripcion.Size = new System.Drawing.Size(110, 20);
             this.txt_descripcion.TabIndex = 9;
@@ -163,7 +163,7 @@
             // txt_cantidad_compra
             // 
             this.txt_cantidad_compra.Location = new System.Drawing.Point(104, 250);
-            this.txt_cantidad_compra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_cantidad_compra.Margin = new System.Windows.Forms.Padding(2);
             this.txt_cantidad_compra.Name = "txt_cantidad_compra";
             this.txt_cantidad_compra.Size = new System.Drawing.Size(120, 20);
             this.txt_cantidad_compra.TabIndex = 10;
@@ -179,12 +179,12 @@
             this.precioventa,
             this.fechavencimiento,
             this.cantidad});
-            this.dataGridView1.Location = new System.Drawing.Point(367, 69);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(379, 69);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(713, 465);
+            this.dataGridView1.Size = new System.Drawing.Size(701, 465);
             this.dataGridView1.TabIndex = 11;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -273,7 +273,7 @@
             // txt_precio_compra
             // 
             this.txt_precio_compra.Location = new System.Drawing.Point(153, 287);
-            this.txt_precio_compra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_precio_compra.Margin = new System.Windows.Forms.Padding(2);
             this.txt_precio_compra.Name = "txt_precio_compra";
             this.txt_precio_compra.Size = new System.Drawing.Size(102, 20);
             this.txt_precio_compra.TabIndex = 15;
@@ -281,18 +281,10 @@
             // txt_venta_compra
             // 
             this.txt_venta_compra.Location = new System.Drawing.Point(142, 319);
-            this.txt_venta_compra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_venta_compra.Margin = new System.Windows.Forms.Padding(2);
             this.txt_venta_compra.Name = "txt_venta_compra";
             this.txt_venta_compra.Size = new System.Drawing.Size(102, 20);
             this.txt_venta_compra.TabIndex = 16;
-            // 
-            // txt_fecha_compra
-            // 
-            this.txt_fecha_compra.Location = new System.Drawing.Point(182, 350);
-            this.txt_fecha_compra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txt_fecha_compra.Name = "txt_fecha_compra";
-            this.txt_fecha_compra.Size = new System.Drawing.Size(102, 20);
-            this.txt_fecha_compra.TabIndex = 17;
             // 
             // label9
             // 
@@ -348,17 +340,25 @@
             this.btnAgregarSuplidor.UseVisualStyleBackColor = true;
             this.btnAgregarSuplidor.Click += new System.EventHandler(this.btnAgregarSuplidor_Click);
             // 
+            // datatimeVencimiento
+            // 
+            this.datatimeVencimiento.Location = new System.Drawing.Point(191, 352);
+            this.datatimeVencimiento.Name = "datatimeVencimiento";
+            this.datatimeVencimiento.Size = new System.Drawing.Size(183, 20);
+            this.datatimeVencimiento.TabIndex = 23;
+            this.datatimeVencimiento.Value = new System.DateTime(2023, 4, 22, 0, 0, 0, 0);
+            // 
             // Form4_ventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1091, 544);
+            this.Controls.Add(this.datatimeVencimiento);
             this.Controls.Add(this.btnAgregarSuplidor);
             this.Controls.Add(this.cmbSuplidor);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.txt_fecha_compra);
             this.Controls.Add(this.txt_venta_compra);
             this.Controls.Add(this.txt_precio_compra);
             this.Controls.Add(this.label8);
@@ -403,7 +403,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txt_precio_compra;
         private System.Windows.Forms.TextBox txt_venta_compra;
-        private System.Windows.Forms.TextBox txt_fecha_compra;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_suplidor;
         private System.Windows.Forms.DataGridViewTextBoxColumn producto;
@@ -416,5 +415,6 @@
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.ComboBox cmbSuplidor;
         private System.Windows.Forms.Button btnAgregarSuplidor;
+        private System.Windows.Forms.DateTimePicker datatimeVencimiento;
     }
 }

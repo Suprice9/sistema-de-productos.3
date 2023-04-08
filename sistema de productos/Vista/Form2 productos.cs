@@ -54,7 +54,7 @@ namespace sistema_de_productos
             MySqlConnection conexion = new MySqlConnection(connectionString);
             conexion.Open();
 
-            int Id= Convert.ToInt32(txtbox_id_buscar_product.Text);
+           // int Id= Convert.ToInt32(txtbox_id_buscar_product.Text);
             
             
             string  Presentacion = txtbox_presentacion_buscar_product.Text;
@@ -64,7 +64,7 @@ namespace sistema_de_productos
 
             MySqlDataReader reader = null;
 
-            string consulta = ("select * from producto  where codigo = '" + Id + "'or nombreproduc LIKE '" + Presentacion + "%'");
+            string consulta = ("select * from producto  where descripcion LIkE '" + Descrip + "%'or nombreproduc LIKE '" + Presentacion + "%'");
 
             MySqlCommand cmd = new MySqlCommand(consulta, conexion);
 

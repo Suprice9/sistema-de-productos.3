@@ -33,3 +33,57 @@ Fecha de vencimiento: 2027-05-01
 --------------------------
 
 
+   FarmaProg 
+---------------------
+Compra de medicamentos para abastecer la farmacia
+---------------------
+Medicamentos
+---------------------
+Fecha: 8/4/2023
+---------------------
+Suplidor: ytyt
+Producto: chco
+Descripcion: medicina
+cantidad: 20
+Precio de compra: 20
+Precio de venta: 3000
+Fecha de vencimiento: System.Windows.Forms.DateTimePicker, Value: 28/4/2023 3:48:16 p. m.
+--------------------------
+
+
+   FarmaProg 
+---------------------
+Compra de medicamentos para abastecer la farmacia
+---------------------
+Medicamentos
+---------------------
+Fecha: 8/4/2023
+---------------------
+Suplidor: 
+Producto: 
+Descripcion: 
+cantidad: 
+Precio de compra: 
+Precio de venta: 
+Fecha de vencimiento: System.Windows.Forms.DateTimePicker, Value: 14/4/2023 3:53:55 p. m.
+--------------------------
+
+
+   FarmaProg 
+---------------------
+Compra de medicamentos para abastecer la farmacia
+---------------------
+Medicamentos
+---------------------
+Fecha: 8/4/2023
+---------------------
+Suplidor: 
+Producto: 
+Descripcion: 
+cantidad: 
+Precio de compra: 
+Precio de venta: 
+Fecha de vencimiento: 8/4/2028 3:56:21 p. m.
+--------------------------
+
+

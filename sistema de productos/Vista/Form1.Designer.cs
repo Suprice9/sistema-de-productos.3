@@ -268,7 +268,7 @@
             this.btn_clientes.Name = "btn_clientes";
             this.btn_clientes.Size = new System.Drawing.Size(152, 55);
             this.btn_clientes.TabIndex = 3;
-            this.btn_clientes.Text = "Clientes";
+            this.btn_clientes.Text = "Suplidores";
             this.btn_clientes.UseVisualStyleBackColor = false;
             this.btn_clientes.Click += new System.EventHandler(this.btn_clientes_Click);
             // 
