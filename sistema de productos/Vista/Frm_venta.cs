@@ -25,6 +25,15 @@ namespace sistema_de_productos.Vista
             InitializeComponent();
         }
 
+        public void limpiar()
+        {
+            txtNombreProducto.Clear();
+            txtPrecioVenta.Clear();
+            TxtStock.Clear();
+            txtFechaVencimiento.Clear();
+            numerictext.Value = 1; 
+        }
+
         private void Frm_venta_Load(object sender, EventArgs e)
         {
             lblFecha.Text = DateTime.Today.Day.ToString() + "/" + DateTime.Today.Month.ToString() + "/" + DateTime.Today.Year.ToString();
@@ -205,6 +214,7 @@ namespace sistema_de_productos.Vista
         {
 
         }
+    
 
         private void lblCostoApagar_Click(object sender, EventArgs e)
         {
@@ -238,6 +248,35 @@ namespace sistema_de_productos.Vista
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            //Todos los datos extraidos de producto lo agrega aquí
+
+            string Vtxtnombre = txtNombreProducto.Text; // Recupera el valor del primer TextBox
+            string VtxtprecioVenta = txtPrecioVenta.Text; // Recupera el valor del segundo TextBox
+            string VtxtStock = TxtStock.Text;     // Recupera el valor del tercero TextBox
+            string VfechaVencimiento = txtFechaVencimiento.Text;    // Recupera el valor del sexto TextBox
+            decimal VnumericText = numerictext.Value;
+
+            DataGridViewRow fila = new DataGridViewRow();
+            fila.CreateCells(dataGridView1);
+            fila.Cells[0].Value = Vtxtnombre; // Establece el valor de la primera celda
+            fila.Cells[1].Value = VtxtprecioVenta; // Establece el valor de la segunda celda
+            fila.Cells[2].Value = VtxtStock; // Establece el valor de la tercera celda
+            fila.Cells[3].Value = VfechaVencimiento; // Establece el valor de la cuarta celda
+            fila.Cells[4].Value = VnumericText;
+
+            dataGridView1.Rows.Add(fila); // Agrega la fila al DataGridView
+
+            limpiar();
 
         }
     }
