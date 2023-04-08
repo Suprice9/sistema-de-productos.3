@@ -375,7 +375,7 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Button btn_p;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.Panel panelcontenedor;
+        public System.Windows.Forms.Panel panelcontenedor;
     }
 }
 

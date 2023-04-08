@@ -39,11 +39,14 @@ namespace sistema_de_productos
             MySqlConnection conexion = new MySqlConnection(connectionString);
             conexion.Open();
 
+            
             string laboratorio = txtLaboratorio.Text;
             int codigo = Convert.ToInt32(txtCodigo.Text);
             string direccion = txtDireccion.Text;
             string correo = txtCorreo.Text;
             string telefono = txtTelefono.Text;
+
+            
 
             //Validar que  no este vacio
             String mensajeError = "";
@@ -63,10 +66,10 @@ namespace sistema_de_productos
             try
             {                                                                                                                                                                                                                                                           
                 string consulta = "Insert Into proveedores (laboratorio,codigo,direccion,correo_electronico,telefono) values ('" + laboratorio + "','" + codigo + "','" + direccion + "','" + correo + "','" + telefono + "')";
-
+                
                 MySqlCommand cmd = new MySqlCommand(consulta, conexion);
                 var resultado = cmd.ExecuteNonQuery();
-                Console.WriteLine("Ingresado correctamente");
+                MessageBox.Show("Ingresado correctamente");
 
             }
             catch (Exception s)

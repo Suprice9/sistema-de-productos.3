@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using sistema_de_productos.Vista;
 
 namespace sistema_de_productos.Vista
 {
@@ -139,51 +140,53 @@ namespace sistema_de_productos.Vista
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            Form formulario = new Form2_productos(); //cuando precione del boton de productos se abre el segundo form
+          
+            formulario.Show();
+
+            /*  // Establecer la cadena de conexión a la base de datos
+              string connectionString = "SERVER=localhost;DATABASE=farmaprog;UID=root;PASSWORD=;";
+
+              // Crear una nueva conexión a la base de datos MySQL
+              MySqlConnection conexion = new MySqlConnection(connectionString);
+
+              try
+              {
+
+                  // Abrir la conexión a la base de datos
+                  conexion.Open();
+
+                  // Crear una consulta que busque un valor específico en un campo de la tabla
+                  string consulta = "SELECT * FROM venta WHERE nombreproduct LIKE '%" + txtIdProducto.Text + "%'";
+
+                  // Crear un nuevo comando MySQL utilizando la consulta y la conexión
+                  MySqlCommand cmd = new MySqlCommand(consulta, conexion);
+
+                  // Crear un adaptador de MySQL para llenar un DataTable con los resultados de la consulta
+                  MySqlDataAdapter adaptador = new MySqlDataAdapter(cmd);
+
+                  // Crear un nuevo DataTable para almacenar los resultados de la consulta
+                  DataTable tabla = new DataTable();
+
+                  // Llenar el DataTable con los resultados de la consulta utilizando el adaptador
+                  adaptador.Fill(tabla);
+
+                  // Asignar el DataTable como origen de datos del control DataGridView
+                  dataGridView1.DataSource = tabla;
 
 
-            // Establecer la cadena de conexión a la base de datos
-            string connectionString = "SERVER=localhost;DATABASE=farmaprog;UID=root;PASSWORD=;";
+              }
+              catch (MySqlException ex)   //revisar aqui
+              {
+                  // Mostrar un mensaje de error si se produce una excepción al buscar en la base de datos
+                  MessageBox.Show("Error al buscar en la base de datos: " + ex.Message);
+              }
+              finally
+              {
+                  // Cerrar la conexión a la base de datos
+                  conexion.Close();
 
-            // Crear una nueva conexión a la base de datos MySQL
-            MySqlConnection conexion = new MySqlConnection(connectionString);
-
-            try
-            {
-
-                // Abrir la conexión a la base de datos
-                conexion.Open();
-
-                // Crear una consulta que busque un valor específico en un campo de la tabla
-                string consulta = "SELECT * FROM venta WHERE nombreproduct LIKE '%" + txtIdProducto.Text + "%'";
-
-                // Crear un nuevo comando MySQL utilizando la consulta y la conexión
-                MySqlCommand cmd = new MySqlCommand(consulta, conexion);
-
-                // Crear un adaptador de MySQL para llenar un DataTable con los resultados de la consulta
-                MySqlDataAdapter adaptador = new MySqlDataAdapter(cmd);
-
-                // Crear un nuevo DataTable para almacenar los resultados de la consulta
-                DataTable tabla = new DataTable();
-
-                // Llenar el DataTable con los resultados de la consulta utilizando el adaptador
-                adaptador.Fill(tabla);
-
-                // Asignar el DataTable como origen de datos del control DataGridView
-                dataGridView1.DataSource = tabla;
-
-
-            }
-            catch (MySqlException ex)   //revisar aqui
-            {
-                // Mostrar un mensaje de error si se produce una excepción al buscar en la base de datos
-                MessageBox.Show("Error al buscar en la base de datos: " + ex.Message);
-            }
-            finally
-            {
-                // Cerrar la conexión a la base de datos
-                conexion.Close();
-
-            }
+              }*/
         }
 
         private void txtCantidad_TextChanged(object sender, EventArgs e)
