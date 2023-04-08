@@ -9,16 +9,23 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using sistema_de_productos.Modelo;
+using sistema_de_productos.Vista;
 using sistema_de_productos.Controlador;
 
 namespace sistema_de_productos
 {
     public partial class Form2_productos : Form
     {
+        Frm_venta fVentas;
         Conexion conexion = new Conexion();
         public Form2_productos()
         {
             InitializeComponent();
+        }
+        public Form2_productos(Frm_venta venta)
+        {
+            InitializeComponent();
+            this.fVentas = venta;
         }
 
         class limpiar
@@ -28,6 +35,9 @@ namespace sistema_de_productos
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+           
+
 
         }
 
@@ -101,6 +111,18 @@ namespace sistema_de_productos
                 e.Handled = true;
                 return;
             }
+        }
+
+        private void data_gv_listadoproduct_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow rellenar = data_gv_listadoproduct.Rows[e.RowIndex];
+
+            fVentas.txtNombreProducto.Text = rellenar.Cells[1].Value.ToString();
+            fVentas.txtPrecioVenta.Text = rellenar.Cells[2].Value.ToString();
+            fVentas.txtFechaVencimiento.Text = rellenar.Cells[4].Value.ToString();
+            fVentas.TxtStock.Text = rellenar.Cells[5].Value.ToString();
+
+            Close();
         }
     }
 }

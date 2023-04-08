@@ -17,6 +17,7 @@ namespace sistema_de_productos.Vista
 {
     public partial class Frm_venta : Form
     {
+        Form2_productos productos = new Form2_productos();
         public Frm_venta()
         {
             
@@ -141,7 +142,7 @@ namespace sistema_de_productos.Vista
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            Form formulario = new Form2_productos(); //cuando precione del boton de productos se abre el segundo form
+            Form formulario = new Form2_productos(this); //cuando precione del boton de productos se abre el segundo form
           
             formulario.Show();
 
@@ -216,6 +217,26 @@ namespace sistema_de_productos.Vista
         }
 
         private void lbldevolucion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNombreProducto_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPrecioVenta_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtStock_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

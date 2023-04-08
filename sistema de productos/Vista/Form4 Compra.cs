@@ -163,6 +163,12 @@ namespace sistema_de_productos
             Form formulario = new Form3_clientes();
             formulario.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form formulario = new Form2_productos(); //cuando precione del boton de productos se abre el segundo form
+            formulario.Show();
+        }
     }
     }
 

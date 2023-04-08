@@ -51,6 +51,7 @@
             this.data_gv_listadoproduct.RowTemplate.Height = 24;
             this.data_gv_listadoproduct.Size = new System.Drawing.Size(710, 425);
             this.data_gv_listadoproduct.TabIndex = 1;
+            this.data_gv_listadoproduct.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_gv_listadoproduct_CellClick);
             this.data_gv_listadoproduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label1
@@ -183,15 +184,15 @@
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView data_gv_listadoproduct;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtbox_presentacion_buscar_product;
-        private System.Windows.Forms.TextBox txtbox_descripcion_buscar_product;
-        private System.Windows.Forms.Button btn_buscar_product;
-        private System.Windows.Forms.Button btn_sucursales;
-        private System.Windows.Forms.Label label7;
+        public System.Windows.Forms.DataGridView data_gv_listadoproduct;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.Label label6;
+        public System.Windows.Forms.TextBox txtbox_presentacion_buscar_product;
+        public System.Windows.Forms.TextBox txtbox_descripcion_buscar_product;
+        public System.Windows.Forms.Button btn_buscar_product;
+        public System.Windows.Forms.Button btn_sucursales;
+        public System.Windows.Forms.Label label7;
     }
 }

@@ -57,7 +57,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.TxtStock = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtFechaVencimiento = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -82,11 +82,13 @@
             // 
             this.txtNombreProducto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNombreProducto.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNombreProducto.Enabled = false;
             this.txtNombreProducto.Location = new System.Drawing.Point(130, 107);
             this.txtNombreProducto.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombreProducto.Name = "txtNombreProducto";
             this.txtNombreProducto.Size = new System.Drawing.Size(125, 20);
             this.txtNombreProducto.TabIndex = 1;
+            this.txtNombreProducto.TextChanged += new System.EventHandler(this.txtNombreProducto_TextChanged);
             // 
             // textBox3
             // 
@@ -361,11 +363,13 @@
             // 
             this.txtPrecioVenta.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPrecioVenta.BackColor = System.Drawing.SystemColors.Window;
+            this.txtPrecioVenta.Enabled = false;
             this.txtPrecioVenta.Location = new System.Drawing.Point(86, 146);
             this.txtPrecioVenta.Margin = new System.Windows.Forms.Padding(2);
             this.txtPrecioVenta.Name = "txtPrecioVenta";
             this.txtPrecioVenta.Size = new System.Drawing.Size(125, 20);
             this.txtPrecioVenta.TabIndex = 28;
+            this.txtPrecioVenta.TextChanged += new System.EventHandler(this.txtPrecioVenta_TextChanged);
             // 
             // label10
             // 
@@ -383,11 +387,13 @@
             // 
             this.TxtStock.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.TxtStock.BackColor = System.Drawing.SystemColors.Window;
+            this.TxtStock.Enabled = false;
             this.TxtStock.Location = new System.Drawing.Point(47, 175);
             this.TxtStock.Margin = new System.Windows.Forms.Padding(2);
             this.TxtStock.Name = "TxtStock";
             this.TxtStock.Size = new System.Drawing.Size(35, 20);
             this.TxtStock.TabIndex = 30;
+            this.TxtStock.TextChanged += new System.EventHandler(this.TxtStock_TextChanged);
             // 
             // label11
             // 
@@ -401,15 +407,17 @@
             this.label11.TabIndex = 33;
             this.label11.Text = "Fecha de vencimiento";
             // 
-            // textBox1
+            // txtFechaVencimiento
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Location = new System.Drawing.Point(139, 209);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(125, 20);
-            this.textBox1.TabIndex = 32;
+            this.txtFechaVencimiento.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtFechaVencimiento.BackColor = System.Drawing.SystemColors.Window;
+            this.txtFechaVencimiento.Enabled = false;
+            this.txtFechaVencimiento.Location = new System.Drawing.Point(139, 209);
+            this.txtFechaVencimiento.Margin = new System.Windows.Forms.Padding(2);
+            this.txtFechaVencimiento.Name = "txtFechaVencimiento";
+            this.txtFechaVencimiento.Size = new System.Drawing.Size(125, 20);
+            this.txtFechaVencimiento.TabIndex = 32;
+            this.txtFechaVencimiento.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Frm_venta
             // 
@@ -418,7 +426,7 @@
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(833, 545);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtFechaVencimiento);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.TxtStock);
             this.Controls.Add(this.label4);
@@ -464,16 +472,12 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtNombreProducto;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
@@ -481,16 +485,20 @@
         private System.Windows.Forms.Label lblCostoApagar;
         private System.Windows.Forms.Label lbldevolucion;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox txt_totalpagar;
-        private System.Windows.Forms.TextBox TxtNombreCliente;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.NumericUpDown numerictext;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtPrecioVenta;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox TxtStock;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.Label label11;
+        public System.Windows.Forms.TextBox txtFechaVencimiento;
+        public System.Windows.Forms.TextBox txtNombreProducto;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Button btnBuscar;
+        public System.Windows.Forms.Button button3;
+        public System.Windows.Forms.TextBox txt_totalpagar;
+        public System.Windows.Forms.TextBox TxtNombreCliente;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.DataGridView dataGridView1;
+        public System.Windows.Forms.NumericUpDown numerictext;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.TextBox txtPrecioVenta;
+        public System.Windows.Forms.TextBox TxtStock;
     }
 }
