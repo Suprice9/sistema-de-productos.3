@@ -1,0 +1,56 @@
+   FarmaProg
+---------------------
+   Venta
+---------------------
+Medicamento
+---------------------
+Fecha: 29/3/2023
+---------------------
+producto: acetaminofen
+cantidad: 150
+Total a pagar: $2,500.00
+--------------------------
+
+
+   FarmaProg
+---------------------
+   Venta
+---------------------
+Medicamento
+---------------------
+Fecha: 29/3/2023
+---------------------
+producto: acetaminofen
+cantidad: 30
+Total a pagar: $50.00
+--------------------------
+
+
+   FarmaProg
+---------------------
+   Venta
+---------------------
+Medicamento
+---------------------
+Fecha: 30/3/2023
+---------------------
+producto: acetaminofen
+cantidad: 12
+Total a pagar: $50.00
+--------------------------
+
+
+   FarmaProg
+---------------------
+   Venta
+---------------------
+Medicamento
+---------------------
+Fecha: 31/3/2023
+---------------------
+producto: acetaminofen
+cantidad: 150
+Total a pagar: $1,500.00
+--------------------------
+
+

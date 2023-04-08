@@ -1,0 +1,27 @@
+Medicamento
+↓↓↓↓↓↓↓↓↓↓↓
+nombre: acetaminofen MK
+De cuantos Mg: 500
+De cuantos ml: 
+Cuantas Unidades: 1700
+--------------------------
+
+
+Medicamento
+↓↓↓↓↓↓↓↓↓↓↓
+nombre: diclo k
+De cuantos Mg: 
+De cuantos ml: 500
+Cuantas Unidades: 300
+--------------------------
+
+
+Medicamento
+↓↓↓↓↓↓↓↓↓↓↓
+nombre: geringa
+De cuantos Mg: 
+De cuantos ml: 12
+Cuantas Unidades: 50
+--------------------------
+
+

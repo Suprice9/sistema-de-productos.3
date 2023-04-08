@@ -1,0 +1,35 @@
+   FarmaProg 
+---------------------
+Compra de medicamentos para abastecer la farmacia
+---------------------
+Medicamentos
+---------------------
+---------------------
+Suplidor: guzman
+Producto: acetaminofen
+Descripcion: medicamento
+cantidad: 1550
+Precio de compra: 10
+Precio de venta: 25
+Fecha de vencimiento: 2028-01-30
+--------------------------
+
+
+   FarmaProg 
+---------------------
+Compra de medicamentos para abastecer la farmacia
+---------------------
+Medicamentos
+---------------------
+Fecha: 30/3/2023
+---------------------
+Suplidor: GBC
+Producto: acetaminofen
+Descripcion: medicamento
+cantidad: 500
+Precio de compra: 5
+Precio de venta: 10
+Fecha de vencimiento: 2027-05-01
+--------------------------
+
+
