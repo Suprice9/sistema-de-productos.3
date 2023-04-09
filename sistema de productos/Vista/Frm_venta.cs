@@ -81,31 +81,15 @@ namespace sistema_de_productos.Vista
 
         private void textBox3_TextChanged(object sender, EventArgs e) //parte donde se introduce el efectivo para que haga el descuento
         {
-            //int total = 6600;
-           double total = Convert.ToDouble(txt_totalpagar.Text); // Total a pagar
+            
+            double total = Convert.ToDouble(suma); // Total a pagar
             double efectivo = Convert.ToDouble(textBox3.Text); // Dinero entregado por el usuario
             double devolucion = - total + efectivo ; // Calcula la cantidad a devolver
 
             // Muestra la cantidad a devolver en el Label "devolucion"
             lbldevolucion.Text = devolucion.ToString();
 
-            /* double total2 = Convert.ToDouble(lblCostoApagar.Text); // Total a pagar
-                                                       // double efectivo = Convert.ToInt32(textBox3.Text);
-        double efectivo = Convert.ToDouble(textBox3.Text); // Dinero entregado por el usuario
-        double cambio = efectivo - total2; // Calcular el cambio a devolver
-
-        // Mostrar el cambio en un cuadro de texto llamado "panel1"
-        lblCostoApagar.Text = cambio.ToString("lblCostoApagar");
-
-         try
-        {
-            lbldevolucion.Text = (float.Parse(textBox3.Text) - float.Parse(lblCostoApagar.Text)).ToString();
-        }
-        catch
-        {
-            //lbldevolucion.Text = 0.ToString();
-
-        }*/
+          
         }
 
         int Conteo;
@@ -114,37 +98,24 @@ namespace sistema_de_productos.Vista
         public int Cantidad { get; private set; }
         public static object SelectedValue { get; private set; }
 
+        //Se puso global para que lo calculara de ahí
+        decimal suma = 0;
         private void button3_Click(object sender, EventArgs e) // boton vender
         {
-            // Conteo = dataGridView1.RowCount; // se cuenta los productos y se utilisa el conteo como limite del for
-            //if (Conteo != 0)
-
-
-
-            //double total;
-
-            //double cantidad = Convert.ToDouble(txtCantidad.Text);
-
-
+            
             // Recorrer el DataGridView y sumar el total de la venta
+            
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
-                double total;
-                double Cantidad;
-                double precio;
-
-                //precio = Convert.ToDouble(row.Cells["preciovent"].Value);
-
-                //Cantidad = Convert.ToDouble(row.Cells["Cantidad"].Value);
-                // total = precio * Cantidad;
-                precio = 150;
-                Cantidad = 10;
                 
 
+                if  (row.Cells[5].Value != null) //5 es "Sub-Precio"
+                { 
+                    suma += Convert.ToDecimal(row.Cells[5].Value);
+                }
 
-                total = precio * Cantidad;
                 // Mostrar el total en el TextBox
-                lblCostoApagar.Text = total.ToString(
+                lblCostoApagar.Text = suma.ToString(
                 lblCostoApagar.Text = "C");
             }
         }
@@ -155,49 +126,6 @@ namespace sistema_de_productos.Vista
           
             formulario.Show();
 
-            /*  // Establecer la cadena de conexión a la base de datos
-              string connectionString = "SERVER=localhost;DATABASE=farmaprog;UID=root;PASSWORD=;";
-
-              // Crear una nueva conexión a la base de datos MySQL
-              MySqlConnection conexion = new MySqlConnection(connectionString);
-
-              try
-              {
-
-                  // Abrir la conexión a la base de datos
-                  conexion.Open();
-
-                  // Crear una consulta que busque un valor específico en un campo de la tabla
-                  string consulta = "SELECT * FROM venta WHERE nombreproduct LIKE '%" + txtIdProducto.Text + "%'";
-
-                  // Crear un nuevo comando MySQL utilizando la consulta y la conexión
-                  MySqlCommand cmd = new MySqlCommand(consulta, conexion);
-
-                  // Crear un adaptador de MySQL para llenar un DataTable con los resultados de la consulta
-                  MySqlDataAdapter adaptador = new MySqlDataAdapter(cmd);
-
-                  // Crear un nuevo DataTable para almacenar los resultados de la consulta
-                  DataTable tabla = new DataTable();
-
-                  // Llenar el DataTable con los resultados de la consulta utilizando el adaptador
-                  adaptador.Fill(tabla);
-
-                  // Asignar el DataTable como origen de datos del control DataGridView
-                  dataGridView1.DataSource = tabla;
-
-
-              }
-              catch (MySqlException ex)   //revisar aqui
-              {
-                  // Mostrar un mensaje de error si se produce una excepción al buscar en la base de datos
-                  MessageBox.Show("Error al buscar en la base de datos: " + ex.Message);
-              }
-              finally
-              {
-                  // Cerrar la conexión a la base de datos
-                  conexion.Close();
-
-              }*/
         }
 
         private void txtCantidad_TextChanged(object sender, EventArgs e)
@@ -265,6 +193,7 @@ namespace sistema_de_productos.Vista
             string VtxtStock = TxtStock.Text;     // Recupera el valor del tercero TextBox
             string VfechaVencimiento = txtFechaVencimiento.Text;    // Recupera el valor del sexto TextBox
             decimal VnumericText = numerictext.Value;
+            decimal dinero=Convert.ToInt32(VtxtprecioVenta) * VnumericText;
 
             DataGridViewRow fila = new DataGridViewRow();
             fila.CreateCells(dataGridView1);
@@ -273,6 +202,7 @@ namespace sistema_de_productos.Vista
             fila.Cells[2].Value = VtxtStock; // Establece el valor de la tercera celda
             fila.Cells[3].Value = VfechaVencimiento; // Establece el valor de la cuarta celda
             fila.Cells[4].Value = VnumericText;
+            fila.Cells[5].Value = dinero;
 
             dataGridView1.Rows.Add(fila); // Agrega la fila al DataGridView
 

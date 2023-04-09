@@ -47,7 +47,6 @@
             this.lblCostoApagar = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txt_totalpagar = new System.Windows.Forms.TextBox();
             this.TxtNombreCliente = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -58,12 +57,14 @@
             this.TxtStock = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtFechaVencimiento = new System.Windows.Forms.TextBox();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnAgregar = new System.Windows.Forms.Button();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txt_totalpagar = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -296,14 +297,6 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // txt_totalpagar
-            // 
-            this.txt_totalpagar.Location = new System.Drawing.Point(585, 55);
-            this.txt_totalpagar.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_totalpagar.Name = "txt_totalpagar";
-            this.txt_totalpagar.Size = new System.Drawing.Size(28, 20);
-            this.txt_totalpagar.TabIndex = 22;
-            // 
             // TxtNombreCliente
             // 
             this.TxtNombreCliente.Location = new System.Drawing.Point(488, 92);
@@ -333,13 +326,14 @@
             this.Column2,
             this.Column3,
             this.Column5,
-            this.Column4});
-            this.dataGridView1.Location = new System.Drawing.Point(9, 259);
+            this.Column4,
+            this.Column6});
+            this.dataGridView1.Location = new System.Drawing.Point(0, 259);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(555, 277);
+            this.dataGridView1.Size = new System.Drawing.Size(622, 277);
             this.dataGridView1.TabIndex = 15;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -432,6 +426,16 @@
             this.txtFechaVencimiento.TabIndex = 32;
             this.txtFechaVencimiento.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Location = new System.Drawing.Point(155, 231);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregar.TabIndex = 34;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
             // Column1
             // 
             this.Column1.HeaderText = "Nombre del producto";
@@ -461,15 +465,18 @@
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
-            // btnAgregar
+            // Column6
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(155, 231);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(75, 23);
-            this.btnAgregar.TabIndex = 34;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            this.Column6.HeaderText = "Sub-Precio";
+            this.Column6.Name = "Column6";
+            // 
+            // txt_totalpagar
+            // 
+            this.txt_totalpagar.Location = new System.Drawing.Point(585, 55);
+            this.txt_totalpagar.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_totalpagar.Name = "txt_totalpagar";
+            this.txt_totalpagar.Size = new System.Drawing.Size(28, 20);
+            this.txt_totalpagar.TabIndex = 22;
             // 
             // Frm_venta
             // 
@@ -545,7 +552,6 @@
         public System.Windows.Forms.Label label2;
         public System.Windows.Forms.Button btnBuscar;
         public System.Windows.Forms.Button button3;
-        public System.Windows.Forms.TextBox txt_totalpagar;
         public System.Windows.Forms.TextBox TxtNombreCliente;
         public System.Windows.Forms.Label label3;
         public System.Windows.Forms.DataGridView dataGridView1;
@@ -553,11 +559,13 @@
         public System.Windows.Forms.Label label4;
         public System.Windows.Forms.TextBox txtPrecioVenta;
         public System.Windows.Forms.TextBox TxtStock;
+        private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        public System.Windows.Forms.TextBox txt_totalpagar;
     }
 }
