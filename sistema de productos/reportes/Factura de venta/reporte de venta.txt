@@ -54,3 +54,48 @@ Total a pagar: $1,500.00
 --------------------------
 
 
+   FarmaProg
+---------------------
+   Venta
+---------------------
+Medicamento
+---------------------
+Fecha: 9/4/2023
+---------------------
+cliente: 
+producto: Medicina
+cantidad: 3
+Total a pagar: 149
+--------------------------
+
+
+   FarmaProg
+---------------------
+   Venta
+---------------------
+Medicamento
+---------------------
+Fecha: 9/4/2023
+---------------------
+cliente: 
+producto: 
+cantidad: 1
+Total a pagar: 199
+--------------------------
+
+
+   FarmaProg
+---------------------
+   Venta
+---------------------
+Medicamento
+---------------------
+Fecha: 9/4/2023
+---------------------
+cliente: Samuel
+producto: 
+cantidad: 1
+Total a pagar: 261
+--------------------------
+
+

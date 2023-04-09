@@ -47,7 +47,7 @@ namespace sistema_de_productos.Vista
             MessageBox.Show("Se ha Realizado Exitosamente");
 
             //inidcicamos donde querenos guardar el archivo que sera nuestro reporte
-            StreamWriter escribir = new StreamWriter(@"C:\Users\enman\Desktop\Hoy\FarmaProg-master3\FarmaProg-master2\sistema de productos\reportes\Factura de venta\reporte de venta.txt", true);
+            StreamWriter escribir = new StreamWriter(@"E:\Programas\sistema-de-productos.2-Pruebas2\sistema de productos\reportes\Factura de venta\reporte de venta.txt", true);
             try
             {
                 escribir.WriteLine("   FarmaProg");
@@ -61,7 +61,7 @@ namespace sistema_de_productos.Vista
                 escribir.WriteLine("cliente: " + TxtNombreCliente.Text);
                 escribir.WriteLine("producto: " + txtNombreProducto.Text);
                 escribir.WriteLine("cantidad: " + numerictext.Text);
-                escribir.WriteLine("Total a pagar: " + lblCostoApagar.Text);
+                escribir.WriteLine("Total a pagar: " + suma);
 
 
                 escribir.WriteLine("--------------------------");
