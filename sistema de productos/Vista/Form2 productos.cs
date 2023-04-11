@@ -17,20 +17,29 @@ namespace sistema_de_productos
     public partial class Form2_productos : Form
     {
         Frm_venta fVentas;
+       
+
+        Form4_ventas fCompras;
+
+
         Conexion conexion = new Conexion();
         public Form2_productos()
         {
             InitializeComponent();
         }
+       
         public Form2_productos(Frm_venta venta)
         {
             InitializeComponent();
             this.fVentas = venta;
+            
         }
 
-        class limpiar
+        public Form2_productos(Form4_ventas Compras)
         {
-
+            InitializeComponent();
+            this.fCompras = Compras;
+            
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -117,10 +126,21 @@ namespace sistema_de_productos
         {
             DataGridViewRow rellenar = data_gv_listadoproduct.Rows[e.RowIndex];
 
-            fVentas.txtNombreProducto.Text = rellenar.Cells[1].Value.ToString();
-            fVentas.txtPrecioVenta.Text = rellenar.Cells[2].Value.ToString();
-            fVentas.txtFechaVencimiento.Text = rellenar.Cells[4].Value.ToString();
-            fVentas.TxtStock.Text = rellenar.Cells[5].Value.ToString();
+            if (fVentas!=null) {
+                fVentas.txtNombreProducto.Text = rellenar.Cells[1].Value.ToString();
+                fVentas.txtPrecioVenta.Text = rellenar.Cells[2].Value.ToString();
+                fVentas.txtFechaVencimiento.Text = rellenar.Cells[4].Value.ToString();
+                fVentas.TxtStock.Text = rellenar.Cells[5].Value.ToString();
+            }
+            if (fCompras!=null)
+            {
+                fCompras.txt_producto_compra.Text = rellenar.Cells[1].Value.ToString();
+                fCompras.txt_descripcion.Text = rellenar.Cells[6].Value.ToString();
+                fCompras.datatimeVencimiento.Text = rellenar.Cells[4].Value.ToString();
+                fCompras.txt_precio_compra.Text = rellenar.Cells[3].Value.ToString();
+                fCompras.txt_venta_compra.Text = rellenar.Cells[2].Value.ToString();
+               
+            }
 
             Close();
         }

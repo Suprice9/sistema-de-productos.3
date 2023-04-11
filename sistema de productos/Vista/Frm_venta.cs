@@ -40,10 +40,10 @@ namespace sistema_de_productos.Vista
         }
         //s
         int Fila = 0;
-
         private void button2_Click(object sender, EventArgs e) // este boton es de realizar  la venta
                                                                //mostrara un mensaje en pantalla diciendo 
-        {
+        {   
+
             MessageBox.Show("Se ha Realizado Exitosamente");
 
             //inidcicamos donde querenos guardar el archivo que sera nuestro reporte

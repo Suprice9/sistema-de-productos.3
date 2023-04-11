@@ -38,7 +38,6 @@
             this.btn_compra = new System.Windows.Forms.Button();
             this.txt_producto_compra = new System.Windows.Forms.TextBox();
             this.txt_descripcion = new System.Windows.Forms.TextBox();
-            this.txt_cantidad_compra = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.id_suplidor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,7 +58,9 @@
             this.btnAgregarSuplidor = new System.Windows.Forms.Button();
             this.datatimeVencimiento = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
+            this.numericUpDownCompra = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCompra)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -160,14 +161,6 @@
             this.txt_descripcion.Name = "txt_descripcion";
             this.txt_descripcion.Size = new System.Drawing.Size(110, 20);
             this.txt_descripcion.TabIndex = 9;
-            // 
-            // txt_cantidad_compra
-            // 
-            this.txt_cantidad_compra.Location = new System.Drawing.Point(104, 250);
-            this.txt_cantidad_compra.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_cantidad_compra.Name = "txt_cantidad_compra";
-            this.txt_cantidad_compra.Size = new System.Drawing.Size(120, 20);
-            this.txt_cantidad_compra.TabIndex = 10;
             // 
             // dataGridView1
             // 
@@ -359,11 +352,34 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // numericUpDownCompra
+            // 
+            this.numericUpDownCompra.Location = new System.Drawing.Point(97, 251);
+            this.numericUpDownCompra.Maximum = new decimal(new int[] {
+            5000,
+            0,
+            0,
+            0});
+            this.numericUpDownCompra.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDownCompra.Name = "numericUpDownCompra";
+            this.numericUpDownCompra.Size = new System.Drawing.Size(68, 20);
+            this.numericUpDownCompra.TabIndex = 25;
+            this.numericUpDownCompra.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // Form4_ventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1091, 544);
+            this.Controls.Add(this.numericUpDownCompra);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.datatimeVencimiento);
             this.Controls.Add(this.btnAgregarSuplidor);
@@ -377,7 +393,6 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.txt_cantidad_compra);
             this.Controls.Add(this.txt_descripcion);
             this.Controls.Add(this.txt_producto_compra);
             this.Controls.Add(this.btn_compra);
@@ -392,6 +407,7 @@
             this.Text = "Compra";
             this.Load += new System.EventHandler(this.Form4_ventas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCompra)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -406,15 +422,10 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button bnt_agregarlista;
         private System.Windows.Forms.Button btn_compra;
-        private System.Windows.Forms.TextBox txt_producto_compra;
-        private System.Windows.Forms.TextBox txt_descripcion;
-        private System.Windows.Forms.TextBox txt_cantidad_compra;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txt_precio_compra;
-        private System.Windows.Forms.TextBox txt_venta_compra;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_suplidor;
         private System.Windows.Forms.DataGridViewTextBoxColumn producto;
@@ -427,7 +438,12 @@
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.ComboBox cmbSuplidor;
         private System.Windows.Forms.Button btnAgregarSuplidor;
-        private System.Windows.Forms.DateTimePicker datatimeVencimiento;
         private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.TextBox txt_producto_compra;
+        public System.Windows.Forms.TextBox txt_descripcion;
+        public System.Windows.Forms.TextBox txt_precio_compra;
+        public System.Windows.Forms.TextBox txt_venta_compra;
+        public System.Windows.Forms.DateTimePicker datatimeVencimiento;
+        public System.Windows.Forms.NumericUpDown numericUpDownCompra;
     }
 }

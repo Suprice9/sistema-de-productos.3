@@ -10,11 +10,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using sistema_de_productos.Vista;
 
 namespace sistema_de_productos
 {
     public partial class Form4_ventas : Form
     {
+    
         public Form4_ventas()
         {
             InitializeComponent();
@@ -71,7 +73,7 @@ namespace sistema_de_productos
             command.Parameters.AddWithValue("@preciocompra", txt_precio_compra.Text);
             command.Parameters.AddWithValue("@precioventa", txt_venta_compra.Text);
             command.Parameters.AddWithValue("@fechavencimiento", datatimeVencimiento.Value);
-            command.Parameters.AddWithValue("@cantidad", txt_cantidad_compra.Text);
+            command.Parameters.AddWithValue("@cantidad", numericUpDownCompra.Text);
 
             // Ejecutar la consulta
             command.ExecuteNonQuery();
@@ -100,7 +102,7 @@ namespace sistema_de_productos
             escribir.WriteLine("Suplidor: " + cmbSuplidor.Text);
             escribir.WriteLine("Producto: " + txt_producto_compra.Text);
             escribir.WriteLine("Descripcion: " + txt_descripcion.Text);
-            escribir.WriteLine("cantidad: " + txt_cantidad_compra.Text);
+            escribir.WriteLine("cantidad: " + numericUpDownCompra.Text);
             escribir.WriteLine("Precio de compra: " +  txt_precio_compra.Text);
             escribir.WriteLine("Precio de venta: " + txt_venta_compra.Text);
             escribir.WriteLine("Fecha de vencimiento: " + datatimeVencimiento.Value);
@@ -131,7 +133,7 @@ namespace sistema_de_productos
             string valor4 = txt_precio_compra.Text;   // Recupera el valor del cuarto TextBox
             string valor5 = txt_venta_compra.Text;    // Recupera el valor del quinto TextBox
             DateTime valor6 =Convert.ToDateTime(datatimeVencimiento.Value);    // Recupera el valor del sexto TextBox
-            string valor7 = txt_cantidad_compra.Text; // Recupera el valor del septimo TextBox
+            string valor7 = numericUpDownCompra.Text; // Recupera el valor del septimo TextBox
 
             DataGridViewRow fila = new DataGridViewRow();
             fila.CreateCells(dataGridView1);
@@ -166,9 +168,11 @@ namespace sistema_de_productos
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form formulario = new Form2_productos(); //cuando precione del boton de productos se abre el segundo form
+            Form formulario = new Form2_productos(this); //cuando precione del boton de productos se abre el segundo form
             formulario.Show();
         }
+
+       
     }
     }
 
