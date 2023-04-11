@@ -122,7 +122,18 @@ namespace sistema_de_productos
 
             MessageBox.Show("Se ha guardado el reporte de esta compra ");
             //---------------------------------------------------------------------------------------
+            dataGridView1.Rows.Clear();
+        }
 
+        public void limpiar()
+        {
+            cmbSuplidor.Text ="";
+            txt_descripcion.Clear();
+            txt_precio_compra.Clear();
+            txt_venta_compra.Clear();
+            txt_producto_compra.Clear();
+            datatimeVencimiento.ResetText();
+            numericUpDownCompra.Value = 1;
         }
 
         private void bnt_agregarlista_Click(object sender, EventArgs e) //este boton agrega los datos introducidos y los refleja en el datagridview que esta al lado
@@ -146,6 +157,10 @@ namespace sistema_de_productos
             fila.Cells[6].Value = valor7; // Establece el valor de la septima celda
 
             dataGridView1.Rows.Add(fila); // Agrega la fila al DataGridView
+
+            limpiar();
+
+            
 
         }
 
