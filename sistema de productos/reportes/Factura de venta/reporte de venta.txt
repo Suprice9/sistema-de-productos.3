@@ -129,3 +129,81 @@ Total a pagar: 744
 --------------------------
 
 
+   FarmaProg
+---------------------
+   Venta
+---------------------
+Medicamento
+---------------------
+Fecha: 11/4/2023
+---------------------
+cliente: Samuel
+producto: 
+cantidad: 1
+Total a pagar: 4200
+--------------------------
+
+
+   FarmaProg
+---------------------
+   Venta
+---------------------
+Medicamento
+---------------------
+Fecha: 12/4/2023
+---------------------
+cliente: Samuel
+producto: 
+cantidad: 1
+Total a pagar: 900
+--------------------------
+
+
+   FarmaProg
+---------------------
+   Venta
+---------------------
+Medicamento
+---------------------
+Fecha: 13/4/2023
+---------------------
+cliente: samuel
+Codigo: 
+producto: 
+cantidad: 1
+Total a pagar: 350
+--------------------------
+
+
+   FarmaProg
+---------------------
+   Venta
+---------------------
+Medicamento
+---------------------
+Fecha: 14/4/2023
+---------------------
+cliente: 
+Codigo: 
+producto: 
+cantidad: 1
+Total a pagar: 0
+--------------------------
+
+
+   FarmaProg
+---------------------
+   Venta
+---------------------
+Medicamento
+---------------------
+Fecha: 14/4/2023
+---------------------
+cliente: Samuel
+Codigo: 
+producto: 
+cantidad: 1
+Total a pagar: 400
+--------------------------
+
+

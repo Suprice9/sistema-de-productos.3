@@ -141,3 +141,817 @@ Fecha de vencimiento: 11/4/2023 3:51:05 p. m.
 --------------------------
 
 
+   FarmaProg 
+---------------------
+Compra de medicamentos para abastecer la farmacia
+---------------------
+Medicamentos
+---------------------
+Fecha: 11/4/2023
+---------------------
+Suplidor: 
+Producto: 
+Descripcion: 
+cantidad: 1
+Precio de compra: 
+Precio de venta: 
+Fecha de vencimiento: 11/4/2023 4:08:06 p. m.
+--------------------------
+
+
+   FarmaProg 
+---------------------
+Compra de medicamentos para abastecer la farmacia
+---------------------
+Medicamentos
+---------------------
+Fecha: 11/4/2023
+---------------------
+Suplidor: 
+Producto: 
+Descripcion: 
+cantidad: 1
+Precio de compra: 
+Precio de venta: 
+Fecha de vencimiento: 11/4/2023 4:11:39 p. m.
+--------------------------
+
+
+   FarmaProg 
+---------------------
+Compra de medicamentos para abastecer la farmacia
+---------------------
+Medicamentos
+---------------------
+Fecha: 11/4/2023
+---------------------
+Suplidor: 
+Producto: 
+Descripcion: 
+cantidad: 1
+Precio de compra: 
+Precio de venta: 
+Fecha de vencimiento: 11/4/2023 5:06:38 p. m.
+--------------------------
+
+
+   FarmaProg 
+---------------------
+Compra de medicamentos para abastecer la farmacia
+---------------------
+Medicamentos
+---------------------
+Fecha: 11/4/2023
+---------------------
+Suplidor: 
+Producto: 
+Descripcion: 
+cantidad: 1
+Precio de compra: 
+Precio de venta: 
+Fecha de vencimiento: 11/4/2023 5:17:02 p. m.
+--------------------------
+
+
+   FarmaProg 
+---------------------
+Compra de medicamentos para abastecer la farmacia
+---------------------
+Medicamentos
+---------------------
+Fecha: 11/4/2023
+---------------------
+Suplidor: adsa
+Producto: acetomenofen
+Descripcion: dolor de cabeza
+cantidad: 4
+Precio de compra: 50
+Precio de venta: 80
+Fecha de vencimiento: 17/7/2025 12:00:00 a. m.
+--------------------------
+
+
+   FarmaProg 
+---------------------
+Compra de medicamentos para abastecer la farmacia
+---------------------
+Medicamentos
+---------------------
+Fecha: 11/4/2023
+---------------------
+Suplidor: 
+Producto: 
+Descripcion: 
+cantidad: 1
+Precio de compra: 
+Precio de venta: 
+Fecha de vencimiento: 11/4/2023 5:28:48 p. m.
+--------------------------
+
+
+   FarmaProg 
+---------------------
+Compra de medicamentos para abastecer la farmacia
+---------------------
+Medicamentos
+---------------------
+Fecha: 11/4/2023
+---------------------
+Suplidor: 
+Producto: 
+Descripcion: 
+cantidad: 1
+Precio de compra: 
+Precio de venta: 
+Fecha de vencimiento: 11/4/2023 5:29:59 p. m.
+--------------------------
+
+
+   FarmaProg 
+---------------------
+Compra de medicamentos para abastecer la farmacia
+---------------------
+Medicamentos
+---------------------
+Fecha: 11/4/2023
+---------------------
+Suplidor: 7
+Producto: Diclo K
+Descripcion: Firbere
+cantidad: 5
+Precio de compra: 50
+Precio de venta: 600
+Fecha de vencimiento: 15/3/2023 12:00:00 a. m.
+--------------------------
+
+
+   FarmaProg 
+---------------------
+Compra de medicamentos para abastecer la farmacia
+---------------------
+Medicamentos
+---------------------
+Fecha: 11/4/2023
+---------------------
+Suplidor: 
+Producto: 
+Descripcion: 
+cantidad: 1
+Precio de compra: 
+Precio de venta: 
+Fecha de vencimiento: 11/4/2023 5:35:22 p. m.
+--------------------------
+
+
+   FarmaProg 
+---------------------
+Compra de medicamentos para abastecer la farmacia
+---------------------
+Medicamentos
+---------------------
+Fecha: 11/4/2023
+---------------------
+Suplidor: 
+Producto: 
+Descripcion: 
+cantidad: 1
+Precio de compra: 
+Precio de venta: 
+Fecha de vencimiento: 11/4/2023 5:36:31 p. m.
+--------------------------
+
+
+   FarmaProg 
+---------------------
+Compra de medicamentos para abastecer la farmacia
+---------------------
+Medicamentos
+---------------------
+Fecha: 11/4/2023
+---------------------
+Suplidor: 10
+Producto: pastillas
+Descripcion: dolor
+cantidad: 4
+Precio de compra: 50
+Precio de venta: 100
+Fecha de vencimiento: 15/3/2023 12:00:00 a. m.
+--------------------------
+
+
+   FarmaProg 
+---------------------
+Compra de medicamentos para abastecer la farmacia
+---------------------
+Medicamentos
+---------------------
+Fecha: 11/4/2023
+---------------------
+Suplidor: 
+Producto: 
+Descripcion: 
+cantidad: 1
+Precio de compra: 
+Precio de venta: 
+Fecha de vencimiento: 11/4/2023 5:46:46 p. m.
+--------------------------
+
+
+   FarmaProg 
+---------------------
+Compra de medicamentos para abastecer la farmacia
+---------------------
+Medicamentos
+---------------------
+Fecha: 11/4/2023
+---------------------
+Suplidor: 
+Producto: 
+Descripcion: 
+cantidad: 1
+Precio de compra: 
+Precio de venta: 
+Fecha de vencimiento: 11/4/2023 5:57:58 p. m.
+--------------------------
+
+
+   FarmaProg 
+---------------------
+Compra de medicamentos para abastecer la farmacia
+---------------------
+Medicamentos
+---------------------
+Fecha: 11/4/2023
+---------------------
+Suplidor: 
+Producto: 
+Descripcion: 
+cantidad: 1
+Precio de compra: 
+Precio de venta: 
+Fecha de vencimiento: 11/4/2023 5:58:59 p. m.
+--------------------------
+
+
+   FarmaProg 
+---------------------
+Compra de medicamentos para abastecer la farmacia
+---------------------
+Medicamentos
+---------------------
+Fecha: 11/4/2023
+---------------------
+Suplidor: 
+Producto: 
+Descripcion: 
+cantidad: 1
+Precio de compra: 
+Precio de venta: 
+Fecha de vencimiento: 11/4/2023 6:32:44 p. m.
+--------------------------
+
+
+   FarmaProg 
+---------------------
+Compra de medicamentos para abastecer la farmacia
+---------------------
+Medicamentos
+---------------------
+Fecha: 11/4/2023
+---------------------
+Suplidor: 
+Producto: 
+Descripcion: 
+cantidad: 1
+Precio de compra: 
+Precio de venta: 
+Fecha de vencimiento: 11/4/2023 6:57:08 p. m.
+--------------------------
+
+
+   FarmaProg 
+---------------------
+Compra de medicamentos para abastecer la farmacia
+---------------------
+Medicamentos
+---------------------
+Fecha: 12/4/2023
+---------------------
+Suplidor: 
+Producto: 
+Descripcion: 
+cantidad: 1
+Precio de compra: 
+Precio de venta: 
+Fecha de vencimiento: 12/4/2023 8:01:42 a. m.
+--------------------------
+
+
+   FarmaProg 
+---------------------
+Compra de medicamentos para abastecer la farmacia
+---------------------
+Medicamentos
+---------------------
+Fecha: 12/4/2023
+---------------------
+Suplidor: 
+Producto: 
+Descripcion: 
+cantidad: 1
+Precio de compra: 
+Precio de venta: 
+Fecha de vencimiento: 12/4/2023 9:00:00 a. m.
+--------------------------
+
+
+   FarmaProg 
+---------------------
+Compra de medicamentos para abastecer la farmacia
+---------------------
+Medicamentos
+---------------------
+Fecha: 12/4/2023
+---------------------
+Suplidor: 
+Producto: 
+Descripcion: 
+cantidad: 1
+Precio de compra: 
+Precio de venta: 
+Fecha de vencimiento: 12/4/2023 9:00:39 a. m.
+--------------------------
+
+
+   FarmaProg 
+---------------------
+Compra de medicamentos para abastecer la farmacia
+---------------------
+Medicamentos
+---------------------
+Fecha: 12/4/2023
+---------------------
+Suplidor: 
+Producto: 
+Descripcion: 
+cantidad: 1
+Precio de compra: 
+Precio de venta: 
+Fecha de vencimiento: 12/4/2023 9:10:39 a. m.
+--------------------------
+
+
+   FarmaProg 
+---------------------
+Compra de medicamentos para abastecer la farmacia
+---------------------
+Medicamentos
+---------------------
+Fecha: 12/4/2023
+---------------------
+Suplidor: 
+Producto: 
+Descripcion: 
+cantidad: 1
+Precio de compra: 
+Precio de venta: 
+Fecha de vencimiento: 12/4/2023 9:21:15 a. m.
+--------------------------
+
+
+   FarmaProg 
+---------------------
+Compra de medicamentos para abastecer la farmacia
+---------------------
+Medicamentos
+---------------------
+Fecha: 12/4/2023
+---------------------
+Suplidor: 
+Producto: 
+Descripcion: 
+cantidad: 1
+Precio de compra: 
+Precio de venta: 
+Fecha de vencimiento: 12/4/2023 9:36:27 a. m.
+--------------------------
+
+
+   FarmaProg 
+---------------------
+Compra de medicamentos para abastecer la farmacia
+---------------------
+Medicamentos
+---------------------
+Fecha: 13/4/2023
+---------------------
+Suplidor: 
+Producto: 12
+Producto: 
+Descripcion: 
+cantidad: 1
+Precio de compra: 
+Precio de venta: 
+Fecha de vencimiento: 13/4/2023 10:20:45 p. m.
+--------------------------
+
+
+   FarmaProg 
+---------------------
+Compra de medicamentos para abastecer la farmacia
+---------------------
+Medicamentos
+---------------------
+Fecha: 13/4/2023
+---------------------
+Suplidor: 
+Producto: 6
+Producto: 
+Descripcion: 
+cantidad: 1
+Precio de compra: 
+Precio de venta: 
+Fecha de vencimiento: 13/4/2023 10:22:39 p. m.
+--------------------------
+
+
+   FarmaProg 
+---------------------
+Compra de medicamentos para abastecer la farmacia
+---------------------
+Medicamentos
+---------------------
+Fecha: 13/4/2023
+---------------------
+Suplidor: 
+Producto: 23
+Producto: 
+Descripcion: 
+cantidad: 1
+Precio de compra: 
+Precio de venta: 
+Fecha de vencimiento: 13/4/2023 10:23:08 p. m.
+--------------------------
+
+
+   FarmaProg 
+---------------------
+Compra de medicamentos para abastecer la farmacia
+---------------------
+Medicamentos
+---------------------
+Fecha: 13/4/2023
+---------------------
+Suplidor: 
+Producto: 6
+Producto: 
+Descripcion: 
+cantidad: 1
+Precio de compra: 
+Precio de venta: 
+Fecha de vencimiento: 13/4/2023 10:23:40 p. m.
+--------------------------
+
+
+   FarmaProg 
+---------------------
+Compra de medicamentos para abastecer la farmacia
+---------------------
+Medicamentos
+---------------------
+Fecha: 13/4/2023
+---------------------
+Suplidor: 
+Producto: 6
+Producto: 
+Descripcion: 
+cantidad: 1
+Precio de compra: 
+Precio de venta: 
+Fecha de vencimiento: 13/4/2023 10:24:06 p. m.
+--------------------------
+
+
+   FarmaProg 
+---------------------
+Compra de medicamentos para abastecer la farmacia
+---------------------
+Medicamentos
+---------------------
+Fecha: 13/4/2023
+---------------------
+Suplidor: 
+Producto: 32
+Producto: 
+Descripcion: 
+cantidad: 1
+Precio de compra: 
+Precio de venta: 
+Fecha de vencimiento: 13/4/2023 10:24:52 p. m.
+--------------------------
+
+
+   FarmaProg 
+---------------------
+Compra de medicamentos para abastecer la farmacia
+---------------------
+Medicamentos
+---------------------
+Fecha: 13/4/2023
+---------------------
+Suplidor: 
+Producto: 3
+Producto: 
+Descripcion: 
+cantidad: 1
+Precio de compra: 
+Precio de venta: 
+Fecha de vencimiento: 13/4/2023 10:26:32 p. m.
+--------------------------
+
+
+   FarmaProg 
+---------------------
+Compra de medicamentos para abastecer la farmacia
+---------------------
+Medicamentos
+---------------------
+Fecha: 13/4/2023
+---------------------
+Suplidor: 
+Producto: 6
+Producto: 
+Descripcion: 
+cantidad: 1
+Precio de compra: 
+Precio de venta: 
+Fecha de vencimiento: 13/4/2023 10:27:20 p. m.
+--------------------------
+
+
+   FarmaProg 
+---------------------
+Compra de medicamentos para abastecer la farmacia
+---------------------
+Medicamentos
+---------------------
+Fecha: 13/4/2023
+---------------------
+Suplidor: 
+Producto: 3
+Producto: 
+Descripcion: 
+cantidad: 1
+Precio de compra: 
+Precio de venta: 
+Fecha de vencimiento: 13/4/2023 10:32:48 p. m.
+--------------------------
+
+
+   FarmaProg 
+---------------------
+Compra de medicamentos para abastecer la farmacia
+---------------------
+Medicamentos
+---------------------
+Fecha: 13/4/2023
+---------------------
+Suplidor: 
+Producto: 6
+Producto: 
+Descripcion: 
+cantidad: 1
+Precio de compra: 
+Precio de venta: 
+Fecha de vencimiento: 13/4/2023 10:35:03 p. m.
+--------------------------
+
+
+   FarmaProg 
+---------------------
+Compra de medicamentos para abastecer la farmacia
+---------------------
+Medicamentos
+---------------------
+Fecha: 13/4/2023
+---------------------
+Suplidor: 
+Producto: 15
+Producto: 
+Descripcion: 
+cantidad: 1
+Precio de compra: 
+Precio de venta: 
+Fecha de vencimiento: 13/4/2023 10:43:43 p. m.
+--------------------------
+
+
+   FarmaProg 
+---------------------
+Compra de medicamentos para abastecer la farmacia
+---------------------
+Medicamentos
+---------------------
+Fecha: 13/4/2023
+---------------------
+Suplidor: 
+Producto: 11
+Producto: 
+Descripcion: 
+cantidad: 1
+Precio de compra: 
+Precio de venta: 
+Fecha de vencimiento: 13/4/2023 10:44:32 p. m.
+--------------------------
+
+
+   FarmaProg 
+---------------------
+Compra de medicamentos para abastecer la farmacia
+---------------------
+Medicamentos
+---------------------
+Fecha: 13/4/2023
+---------------------
+Suplidor: 
+Producto: 12
+Producto: 
+Descripcion: 
+cantidad: 1
+Precio de compra: 
+Precio de venta: 
+Fecha de vencimiento: 13/4/2023 10:45:16 p. m.
+--------------------------
+
+
+   FarmaProg 
+---------------------
+Compra de medicamentos para abastecer la farmacia
+---------------------
+Medicamentos
+---------------------
+Fecha: 13/4/2023
+---------------------
+Suplidor: 
+Producto: 12
+Producto: 
+Descripcion: 
+cantidad: 1
+Precio de compra: 
+Precio de venta: 
+Fecha de vencimiento: 13/4/2023 10:45:57 p. m.
+--------------------------
+
+
+   FarmaProg 
+---------------------
+Compra de medicamentos para abastecer la farmacia
+---------------------
+Medicamentos
+---------------------
+Fecha: 13/4/2023
+---------------------
+Suplidor: 
+Producto: 37
+Producto: 
+Descripcion: 
+cantidad: 1
+Precio de compra: 
+Precio de venta: 
+Fecha de vencimiento: 13/4/2023 10:46:44 p. m.
+--------------------------
+
+
+   FarmaProg 
+---------------------
+Compra de medicamentos para abastecer la farmacia
+---------------------
+Medicamentos
+---------------------
+Fecha: 13/4/2023
+---------------------
+Suplidor: 
+Producto: 16
+Producto: 
+Descripcion: 
+cantidad: 1
+Precio de compra: 
+Precio de venta: 
+Fecha de vencimiento: 13/4/2023 10:48:03 p. m.
+--------------------------
+
+
+   FarmaProg 
+---------------------
+Compra de medicamentos para abastecer la farmacia
+---------------------
+Medicamentos
+---------------------
+Fecha: 14/4/2023
+---------------------
+Suplidor: 
+Producto: 11
+Producto: 
+Descripcion: 
+cantidad: 1
+Precio de compra: 
+Precio de venta: 
+Fecha de vencimiento: 14/4/2023 6:32:04 p. m.
+--------------------------
+
+
+   FarmaProg 
+---------------------
+Compra de medicamentos para abastecer la farmacia
+---------------------
+Medicamentos
+---------------------
+Fecha: 14/4/2023
+---------------------
+Suplidor: 
+Producto: 16
+Producto: 
+Descripcion: 
+cantidad: 1
+Precio de compra: 
+Precio de venta: 
+Fecha de vencimiento: 14/4/2023 6:39:37 p. m.
+--------------------------
+
+
+   FarmaProg 
+---------------------
+Compra de medicamentos para abastecer la farmacia
+---------------------
+Medicamentos
+---------------------
+Fecha: 14/4/2023
+---------------------
+Suplidor: 
+Producto: 23
+Producto: 
+Descripcion: 
+cantidad: 1
+Precio de compra: 
+Precio de venta: 
+Fecha de vencimiento: 14/4/2023 6:39:53 p. m.
+--------------------------
+
+
+   FarmaProg 
+---------------------
+Compra de medicamentos para abastecer la farmacia
+---------------------
+Medicamentos
+---------------------
+Fecha: 14/4/2023
+---------------------
+Suplidor: 
+Producto: 15
+Producto: 
+Descripcion: 
+cantidad: 1
+Precio de compra: 
+Precio de venta: 
+Fecha de vencimiento: 14/4/2023 6:40:51 p. m.
+--------------------------
+
+
+   FarmaProg 
+---------------------
+Compra de medicamentos para abastecer la farmacia
+---------------------
+Medicamentos
+---------------------
+Fecha: 14/4/2023
+---------------------
+Suplidor: 
+Producto: 
+Producto: 
+Descripcion: 
+cantidad: 1
+Precio de compra: 
+Precio de venta: 
+Fecha de vencimiento: 22/4/2023 12:00:00 a. m.
+--------------------------
+
+
+   FarmaProg 
+---------------------
+Compra de medicamentos para abastecer la farmacia
+---------------------
+Medicamentos
+---------------------
+Fecha: 14/4/2023
+---------------------
+Suplidor: 
+Producto: 
+Producto: 
+Descripcion: 
+cantidad: 1
+Precio de compra: 
+Precio de venta: 
+Fecha de vencimiento: 22/4/2023 12:00:00 a. m.
+--------------------------
+
+

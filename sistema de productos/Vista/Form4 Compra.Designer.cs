@@ -39,6 +39,7 @@
             this.txt_producto_compra = new System.Windows.Forms.TextBox();
             this.txt_descripcion = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_suplidor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,6 +60,9 @@
             this.datatimeVencimiento = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
             this.numericUpDownCompra = new System.Windows.Forms.NumericUpDown();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.btnMostrarCompra = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCompra)).BeginInit();
             this.SuspendLayout();
@@ -80,7 +84,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(20, 144);
+            this.label2.Location = new System.Drawing.Point(20, 120);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 17);
@@ -166,6 +170,7 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
             this.id_suplidor,
             this.producto,
             this.descripcion,
@@ -182,6 +187,11 @@
             this.dataGridView1.TabIndex = 11;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Codigo";
+            this.Column1.Name = "Column1";
+            // 
             // id_suplidor
             // 
             this.id_suplidor.HeaderText = "id_suplidor";
@@ -191,7 +201,7 @@
             // 
             // producto
             // 
-            this.producto.HeaderText = "producto";
+            this.producto.HeaderText = "Nombreproducto";
             this.producto.MinimumWidth = 6;
             this.producto.Name = "producto";
             this.producto.Width = 125;
@@ -318,7 +328,7 @@
             // cmbSuplidor
             // 
             this.cmbSuplidor.FormattingEnabled = true;
-            this.cmbSuplidor.Location = new System.Drawing.Point(103, 144);
+            this.cmbSuplidor.Location = new System.Drawing.Point(103, 120);
             this.cmbSuplidor.Name = "cmbSuplidor";
             this.cmbSuplidor.Size = new System.Drawing.Size(121, 21);
             this.cmbSuplidor.TabIndex = 21;
@@ -326,7 +336,7 @@
             // 
             // btnAgregarSuplidor
             // 
-            this.btnAgregarSuplidor.Location = new System.Drawing.Point(230, 142);
+            this.btnAgregarSuplidor.Location = new System.Drawing.Point(230, 118);
             this.btnAgregarSuplidor.Name = "btnAgregarSuplidor";
             this.btnAgregarSuplidor.Size = new System.Drawing.Size(91, 23);
             this.btnAgregarSuplidor.TabIndex = 22;
@@ -374,11 +384,46 @@
             0,
             0});
             // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Enabled = false;
+            this.txtCodigo.Location = new System.Drawing.Point(103, 150);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(62, 20);
+            this.txtCodigo.TabIndex = 26;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Enabled = false;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(20, 153);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(58, 17);
+            this.label11.TabIndex = 27;
+            this.label11.Text = "Codigo";
+            // 
+            // btnMostrarCompra
+            // 
+            this.btnMostrarCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMostrarCompra.Location = new System.Drawing.Point(97, 474);
+            this.btnMostrarCompra.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMostrarCompra.Name = "btnMostrarCompra";
+            this.btnMostrarCompra.Size = new System.Drawing.Size(122, 31);
+            this.btnMostrarCompra.TabIndex = 28;
+            this.btnMostrarCompra.Text = "Mostrar Compra";
+            this.btnMostrarCompra.UseVisualStyleBackColor = true;
+            this.btnMostrarCompra.Click += new System.EventHandler(this.btnMostrarCompra_Click);
+            // 
             // Form4_ventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1091, 544);
+            this.Controls.Add(this.btnMostrarCompra);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.numericUpDownCompra);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.datatimeVencimiento);
@@ -427,13 +472,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_suplidor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn producto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn preciocompa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precioventa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechavencimiento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.ComboBox cmbSuplidor;
@@ -445,5 +483,16 @@
         public System.Windows.Forms.TextBox txt_venta_compra;
         public System.Windows.Forms.DateTimePicker datatimeVencimiento;
         public System.Windows.Forms.NumericUpDown numericUpDownCompra;
+        private System.Windows.Forms.Label label11;
+        public System.Windows.Forms.TextBox txtCodigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_suplidor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn producto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn preciocompa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precioventa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechavencimiento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
+        private System.Windows.Forms.Button btnMostrarCompra;
     }
 }

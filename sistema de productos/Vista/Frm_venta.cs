@@ -27,6 +27,7 @@ namespace sistema_de_productos.Vista
 
         public void limpiar()
         {
+            txtCodigo.Clear();
             txtNombreProducto.Clear();
             txtPrecioVenta.Clear();
             TxtStock.Clear();
@@ -59,6 +60,7 @@ namespace sistema_de_productos.Vista
                 escribir.WriteLine("Fecha: " + lblFecha.Text);
                 escribir.WriteLine("---------------------");
                 escribir.WriteLine("cliente: " + TxtNombreCliente.Text);
+                escribir.WriteLine("Codigo: " + txtCodigo.Text);
                 escribir.WriteLine("producto: " + txtNombreProducto.Text);
                 escribir.WriteLine("cantidad: " + numerictext.Text);
                 escribir.WriteLine("Total a pagar: " + suma);
@@ -109,9 +111,9 @@ namespace sistema_de_productos.Vista
             {
                 
 
-                if  (row.Cells[5].Value != null) //5 es "Sub-Precio"
+                if  (row.Cells[6].Value != null) //5 es "Sub-Precio"
                 { 
-                    suma += Convert.ToDecimal(row.Cells[5].Value);
+                    suma += Convert.ToDecimal(row.Cells[6].Value);
                 }
 
                 // Mostrar el total en el TextBox
@@ -188,7 +190,8 @@ namespace sistema_de_productos.Vista
         {
             //Todos los datos extraidos de producto lo agrega aquí
 
-            string Vtxtnombre = txtNombreProducto.Text; // Recupera el valor del primer TextBox
+            string Vtxtnombre = txtNombreProducto.Text;  // Recupera el valor del primer TextBox
+            string codigo = txtCodigo.Text;                                  
             string VtxtprecioVenta = txtPrecioVenta.Text; // Recupera el valor del segundo TextBox
             string VtxtStock = TxtStock.Text;     // Recupera el valor del tercero TextBox
             string VfechaVencimiento = txtFechaVencimiento.Text;    // Recupera el valor del sexto TextBox
@@ -197,17 +200,24 @@ namespace sistema_de_productos.Vista
 
             DataGridViewRow fila = new DataGridViewRow();
             fila.CreateCells(dataGridView1);
-            fila.Cells[0].Value = Vtxtnombre; // Establece el valor de la primera celda
-            fila.Cells[1].Value = VtxtprecioVenta; // Establece el valor de la segunda celda
-            fila.Cells[2].Value = VtxtStock; // Establece el valor de la tercera celda
-            fila.Cells[3].Value = VfechaVencimiento; // Establece el valor de la cuarta celda
-            fila.Cells[4].Value = VnumericText;
-            fila.Cells[5].Value = dinero;
+            fila.Cells[0].Value = codigo;
+            fila.Cells[1].Value = Vtxtnombre; // Establece el valor de la primera celda
+            fila.Cells[2].Value = VtxtprecioVenta; // Establece el valor de la segunda celda
+            fila.Cells[3].Value = VtxtStock; // Establece el valor de la tercera celda
+            fila.Cells[4].Value = VfechaVencimiento; // Establece el valor de la cuarta celda
+            fila.Cells[5].Value = VnumericText;
+            fila.Cells[6].Value = dinero;
 
             dataGridView1.Rows.Add(fila); // Agrega la fila al DataGridView
 
             limpiar();
 
+        }
+
+        private void btnReporteVenta_Click(object sender, EventArgs e)
+        {
+            TextReader leer = new StreamReader(@"E:\Programas\sistema-de-productos.2-Pruebas2\sistema de productos\reportes\Factura de venta\reporte de venta.txt");
+            MessageBox.Show(leer.ReadToEnd());
         }
     }
 }

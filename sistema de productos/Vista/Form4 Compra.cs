@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using sistema_de_productos.Vista;
+using sistema_de_productos.Controlador;
 
 namespace sistema_de_productos
 {
@@ -32,15 +33,21 @@ namespace sistema_de_productos
             MySqlConnection conexion = new MySqlConnection(connectionString);
             conexion.Open();
 
-            MySqlCommand cm = new MySqlCommand("Select laboratorio from proveedores", conexion);
+            MySqlCommand cm = new MySqlCommand("Select laboratorio,codprov from proveedores", conexion);
 
-
+            //Mientras el registro lea buscara los suplidores existente en la base de datos
             MySqlDataReader registro = cm.ExecuteReader();
+
+            
             while (registro.Read())
             {
-                cmbSuplidor.Items.Add(registro["laboratorio"].ToString());
+                cmbSuplidor.Items.Add(registro["codprov"].ToString());
+               
             }
-            conexion.Close();
+           
+               conexion.Close();
+            
+
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -53,6 +60,34 @@ namespace sistema_de_productos
 
         }
 
+        public void InsetarFactura(List<Datos> f)
+        {
+            string connectionString = "server=localhost;user id=root;password=;database=farmaprog";
+            MySqlConnection conexion = new MySqlConnection(connectionString);
+            conexion.Open();
+
+            foreach(Datos fact in f)
+            {
+                string query = "Insert into producto(idproveedor,nombreproduc,preciovent,preciocomp,fechavencimiento,stock,descripcion) VALUES(@id_suplidor, @producto,@precioventa,@preciocompra, @fechavencimiento, @cantidad,@descripcion)";
+
+                MySqlCommand cmd = new MySqlCommand(query,conexion);
+
+                // Asignar los valores a los parámetros de consulta
+                cmd.Parameters.AddWithValue("@id_suplidor", fact.Idsuplidor);
+                cmd.Parameters.AddWithValue("@producto", fact.Producto);
+                cmd.Parameters.AddWithValue("@descripcion", fact.Descripcion);
+                cmd.Parameters.AddWithValue("@preciocompra", fact.Preciocompra);
+                cmd.Parameters.AddWithValue("@precioventa", fact.Precioventa);
+                cmd.Parameters.AddWithValue("@fechavencimiento", fact.Fechavenci);
+                cmd.Parameters.AddWithValue("@cantidad", fact.Cantidad);
+
+                cmd.ExecuteNonQuery();
+            }
+            
+
+            conexion.Close();
+        }
+
         private void btn_compra_Click(object sender, EventArgs e)
         {
             // Conectar a la base de datos
@@ -60,69 +95,84 @@ namespace sistema_de_productos
             MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
 
-            // Escribir la consulta SQL
-            string query = "INSERT INTO compra (id_suplidor, producto, descripcion, preciocompra, precioventa, fechavencimiento, cantidad) VALUES (@id_suplidor, @producto, @descripcion, @preciocompra, @precioventa, @fechavencimiento, @cantidad)";
-
-            // Crear un objeto MySqlCommand
-            MySqlCommand command = new MySqlCommand(query, connection);
-
-            // Asignar los valores a los parámetros de consulta
-            command.Parameters.AddWithValue("@id_suplidor", cmbSuplidor.Text);
-            command.Parameters.AddWithValue("@producto", txt_producto_compra.Text);
-            command.Parameters.AddWithValue("@descripcion", txt_descripcion.Text);
-            command.Parameters.AddWithValue("@preciocompra", txt_precio_compra.Text);
-            command.Parameters.AddWithValue("@precioventa", txt_venta_compra.Text);
-            command.Parameters.AddWithValue("@fechavencimiento", datatimeVencimiento.Value);
-            command.Parameters.AddWithValue("@cantidad", numericUpDownCompra.Text);
-
-            // Ejecutar la consulta
-            command.ExecuteNonQuery();
-
-            // Cerrar la conexión a la base de datos
-            connection.Close();
-
-            // Mostrar un mensaje de éxito
-            MessageBox.Show("se ha Realizado la compra correctamente.");
-
-            //esta parte de aqui guarda los daton introducidos en un documento de texto
-
             
-            //inidcicamos donde querenos guardar el archivo que sera nuestro reporte
-            StreamWriter escribir = new StreamWriter(@"E:\Programas\sistema-de-productos.2-Pruebas2\sistema de productos\reportes\Factura de compra\reporte de compra.txt", true);
-            try
-            {
-                escribir.WriteLine("   FarmaProg ");
-                escribir.WriteLine("---------------------");
-                escribir.WriteLine("Compra de medicamentos para abastecer la farmacia");
-                escribir.WriteLine("---------------------");
-                escribir.WriteLine("Medicamentos");
-                escribir.WriteLine("---------------------");
-                escribir.WriteLine("Fecha: " + lblFecha.Text);
-                escribir.WriteLine("---------------------"); //de aqui para abajo van los datos de suplidor etc
-            escribir.WriteLine("Suplidor: " + cmbSuplidor.Text);
-            escribir.WriteLine("Producto: " + txt_producto_compra.Text);
-            escribir.WriteLine("Descripcion: " + txt_descripcion.Text);
-            escribir.WriteLine("cantidad: " + numericUpDownCompra.Text);
-            escribir.WriteLine("Precio de compra: " +  txt_precio_compra.Text);
-            escribir.WriteLine("Precio de venta: " + txt_venta_compra.Text);
-            escribir.WriteLine("Fecha de vencimiento: " + datatimeVencimiento.Value);
-                
+
+            //Toma los valores del datagridview
+           
+            
+            List<Datos> listfact = new List<Datos>();
+
+            foreach (DataGridViewRow filas in dataGridView1.Rows) {
+                Datos fact = new Datos();
+
+                if (filas.Cells[0].Value != null)
+                {
 
 
-                escribir.WriteLine("--------------------------");
-                escribir.WriteLine("\n");
+                    fact.Codigo = (string)filas.Cells[0].Value;
+                    fact.Idsuplidor = (string)filas.Cells[1].Value;
+                    fact.Producto = (string)filas.Cells[2].Value;
+                    fact.Descripcion = (string)filas.Cells[3].Value;
+                    fact.Preciocompra = (string)filas.Cells[4].Value;
+                    fact.Precioventa = (string)filas.Cells[5].Value;
+                    fact.Fechavenci = (DateTime)filas.Cells[6].Value;
+                    fact.Cantidad = (string)filas.Cells[7].Value;
+
+                    listfact.Add(fact);
+                   
+                }
+          
             }
-            catch
-            {
-                //mensaje error
-                MessageBox.Show("error");
-            }
-            //cerramos proceso
-            escribir.Close();
+            InsetarFactura(listfact);
 
-            MessageBox.Show("Se ha guardado el reporte de esta compra ");
-            //---------------------------------------------------------------------------------------
-            dataGridView1.Rows.Clear();
+            if (listfact != null)
+            {
+                MessageBox.Show("No hay datos que ingresar ");
+            }
+            else
+            {
+                MessageBox.Show("se ha Realizado la compra correctamente.");
+
+
+                //esta parte de aqui guarda los daton introducidos en un documento de texto
+                //inidcicamos donde querenos guardar el archivo que sera nuestro reporte
+                StreamWriter escribir = new StreamWriter(@"E:\Programas\sistema-de-productos.2-Pruebas2\sistema de productos\reportes\Factura de compra\reporte de compra.", true);
+                try
+                {
+                    escribir.WriteLine("   FarmaProg ");
+                    escribir.WriteLine("---------------------");
+                    escribir.WriteLine("Compra de medicamentos para abastecer la farmacia");
+                    escribir.WriteLine("---------------------");
+                    escribir.WriteLine("Medicamentos");
+                    escribir.WriteLine("---------------------");
+                    escribir.WriteLine("Fecha: " + lblFecha.Text);
+                    escribir.WriteLine("---------------------"); //de aqui para abajo van los datos de suplidor etc
+                    escribir.WriteLine("Suplidor: " + cmbSuplidor.Text);
+                    escribir.WriteLine("Producto: " + txtCodigo.Text);
+                    escribir.WriteLine("Producto: " + txt_producto_compra.Text);
+                    escribir.WriteLine("Descripcion: " + txt_descripcion.Text);
+                    escribir.WriteLine("cantidad: " + numericUpDownCompra.Text);
+                    escribir.WriteLine("Precio de compra: " + txt_precio_compra.Text);
+                    escribir.WriteLine("Precio de venta: " + txt_venta_compra.Text);
+                    escribir.WriteLine("Fecha de vencimiento: " + datatimeVencimiento.Value);
+
+
+
+                    escribir.WriteLine("--------------------------");
+                    escribir.WriteLine("\n");
+                }
+                catch
+                {
+                    //mensaje error
+                    MessageBox.Show("error");
+                }
+                //cerramos proceso
+                escribir.Close();
+
+                MessageBox.Show("Se ha guardado el reporte de esta compra ");
+                //---------------------------------------------------------------------------------------
+                dataGridView1.Rows.Clear();
+            }
         }
 
         public void limpiar()
@@ -145,21 +195,23 @@ namespace sistema_de_productos
             string valor5 = txt_venta_compra.Text;    // Recupera el valor del quinto TextBox
             DateTime valor6 =Convert.ToDateTime(datatimeVencimiento.Value);    // Recupera el valor del sexto TextBox
             string valor7 = numericUpDownCompra.Text; // Recupera el valor del septimo TextBox
+            string valor8 = txtCodigo.Text;
 
             DataGridViewRow fila = new DataGridViewRow();
             fila.CreateCells(dataGridView1);
-            fila.Cells[0].Value = valor1; // Establece el valor de la primera celda
-            fila.Cells[1].Value = valor2; // Establece el valor de la segunda celda
-            fila.Cells[2].Value = valor3; // Establece el valor de la tercera celda
-            fila.Cells[3].Value = valor4; // Establece el valor de la cuarta celda
-            fila.Cells[4].Value = valor5; // Establece el valor de la quinta celda
-            fila.Cells[5].Value = valor6; // Establece el valor de la sexta celda
-            fila.Cells[6].Value = valor7; // Establece el valor de la septima celda
+            fila.Cells[0].Value = valor8;
+            fila.Cells[1].Value = valor1; // Establece el valor de la primera celda
+            fila.Cells[2].Value = valor2; // Establece el valor de la segunda celda
+            fila.Cells[3].Value = valor3; // Establece el valor de la tercera celda
+            fila.Cells[4].Value = valor4; // Establece el valor de la cuarta celda
+            fila.Cells[5].Value = valor5; // Establece el valor de la quinta celda
+            fila.Cells[6].Value = valor6; // Establece el valor de la sexta celda
+            fila.Cells[7].Value = valor7; // Establece el valor de la septima celda
 
             dataGridView1.Rows.Add(fila); // Agrega la fila al DataGridView
 
             limpiar();
-
+            
             
 
         }
@@ -187,7 +239,12 @@ namespace sistema_de_productos
             formulario.Show();
         }
 
-       
+        private void btnMostrarCompra_Click(object sender, EventArgs e)
+        {
+
+            TextReader leer = new StreamReader(@"E:\Programas\sistema-de-productos.2-Pruebas2\sistema de productos\reportes\Factura de compra\reporte de compra.txt", true);
+            MessageBox.Show(leer.ReadToEnd());
+        }
     }
     }
 

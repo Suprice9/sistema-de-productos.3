@@ -109,6 +109,8 @@
     <Compile Include="Controlador\Venta.cs" />
     <Compile Include="Microsoft\VisualBasic\ImplementedException.cs" />
     <Compile Include="Microsoft\VisualBasic\Interaction.cs" />
+    <Compile Include="Modelo\CodeFile1.cs" />
+    <Compile Include="Modelo\datosFactura.cs" />
     <Compile Include="sistema_de_productos\Vista\Form4_ventas.cs">
       <SubType>Form</SubType>
     </Compile>
