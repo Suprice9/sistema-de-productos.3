@@ -82,8 +82,44 @@ namespace sistema_de_productos
                 cmd.Parameters.AddWithValue("@cantidad", fact.Cantidad);
 
                 cmd.ExecuteNonQuery();
+
+                //esta parte de aqui guarda los daton introducidos en un documento de texto
+                //inidcicamos donde querenos guardar el archivo que sera nuestro reporte
+                StreamWriter escribir = new StreamWriter(@"E:\Programas\sistema-de-productos.2-Pruebas2\sistema de productos\reportes\Factura de compra\reporte de compra.txt", true);
+                try
+                {
+                    escribir.WriteLine("   FarmaProg ");
+                    escribir.WriteLine("---------------------");
+                    escribir.WriteLine("Compra de medicamentos para abastecer la farmacia");
+                    escribir.WriteLine("---------------------");
+                    escribir.WriteLine("Medicamentos");
+                    escribir.WriteLine("---------------------");
+                    escribir.WriteLine("Fecha: " + lblFecha.Text);
+                    escribir.WriteLine("---------------------"); //de aqui para abajo van los datos de suplidor etc
+                    escribir.WriteLine("Suplidor: " + fact.Idsuplidor);
+                    escribir.WriteLine("Producto: " + fact.Producto);
+                    escribir.WriteLine("Descripcion: " + fact.Descripcion);
+                    escribir.WriteLine("cantidad: " + fact.Cantidad);
+                    escribir.WriteLine("Precio de compra: " + fact.Precioventa);
+                    escribir.WriteLine("Precio de venta: " + fact.Preciocompra);
+                    escribir.WriteLine("Fecha de vencimiento: " + fact.Fechavenci);
+
+
+
+                    escribir.WriteLine("--------------------------");
+                    escribir.WriteLine("\n");
+                }
+                catch
+                {
+                    //mensaje error
+                    MessageBox.Show("error");
+                }
+                //cerramos proceso
+                escribir.Close();
             }
             
+
+
 
             conexion.Close();
         }
@@ -125,58 +161,21 @@ namespace sistema_de_productos
             }
             InsetarFactura(listfact);
 
-            if (listfact != null)
-            {
-                MessageBox.Show("No hay datos que ingresar ");
-            }
-            else
-            {
+           
                 MessageBox.Show("se ha Realizado la compra correctamente.");
 
 
-                //esta parte de aqui guarda los daton introducidos en un documento de texto
-                //inidcicamos donde querenos guardar el archivo que sera nuestro reporte
-                StreamWriter escribir = new StreamWriter(@"E:\Programas\sistema-de-productos.2-Pruebas2\sistema de productos\reportes\Factura de compra\reporte de compra.", true);
-                try
-                {
-                    escribir.WriteLine("   FarmaProg ");
-                    escribir.WriteLine("---------------------");
-                    escribir.WriteLine("Compra de medicamentos para abastecer la farmacia");
-                    escribir.WriteLine("---------------------");
-                    escribir.WriteLine("Medicamentos");
-                    escribir.WriteLine("---------------------");
-                    escribir.WriteLine("Fecha: " + lblFecha.Text);
-                    escribir.WriteLine("---------------------"); //de aqui para abajo van los datos de suplidor etc
-                    escribir.WriteLine("Suplidor: " + cmbSuplidor.Text);
-                    escribir.WriteLine("Producto: " + txtCodigo.Text);
-                    escribir.WriteLine("Producto: " + txt_producto_compra.Text);
-                    escribir.WriteLine("Descripcion: " + txt_descripcion.Text);
-                    escribir.WriteLine("cantidad: " + numericUpDownCompra.Text);
-                    escribir.WriteLine("Precio de compra: " + txt_precio_compra.Text);
-                    escribir.WriteLine("Precio de venta: " + txt_venta_compra.Text);
-                    escribir.WriteLine("Fecha de vencimiento: " + datatimeVencimiento.Value);
-
-
-
-                    escribir.WriteLine("--------------------------");
-                    escribir.WriteLine("\n");
-                }
-                catch
-                {
-                    //mensaje error
-                    MessageBox.Show("error");
-                }
-                //cerramos proceso
-                escribir.Close();
+                
 
                 MessageBox.Show("Se ha guardado el reporte de esta compra ");
                 //---------------------------------------------------------------------------------------
                 dataGridView1.Rows.Clear();
             }
-        }
+        
 
         public void limpiar()
         {
+            txtCodigo.Clear();
             cmbSuplidor.Text ="";
             txt_descripcion.Clear();
             txt_precio_compra.Clear();

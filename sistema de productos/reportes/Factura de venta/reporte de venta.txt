@@ -207,3 +207,131 @@ Total a pagar: 400
 --------------------------
 
 
+   FarmaProg
+---------------------
+   Venta
+---------------------
+Medicamento
+---------------------
+Fecha: 14/4/2023
+---------------------
+cliente: samuel
+Codigo: 
+producto: 
+cantidad: 1
+Total a pagar: 400
+--------------------------
+
+
+   FarmaProg
+---------------------
+   Venta
+---------------------
+Medicamento
+---------------------
+Fecha: 14/4/2023
+---------------------
+cliente: Carlos
+Codigo: 
+producto: 
+cantidad: 1
+Total a pagar: 280
+--------------------------
+
+
+   FarmaProg
+---------------------
+   Venta
+---------------------
+Medicamento
+---------------------
+Fecha: 14/4/2023
+---------------------
+cliente: Carlos
+Codigo: 15
+producto: Acetomenofen
+cantidad: 4
+Total a pagar: 280
+--------------------------
+
+
+   FarmaProg
+---------------------
+   Venta
+---------------------
+Medicamento
+---------------------
+Fecha: 14/4/2023
+---------------------
+cliente: Samuel
+Codigo: 15
+producto: Acetomenofen
+cantidad: 4
+Total a pagar: 960
+--------------------------
+
+
+   FarmaProg
+---------------------
+   Venta
+---------------------
+Medicamento
+---------------------
+Fecha: 14/4/2023
+---------------------
+cliente: Samuel
+Codigo: 12
+producto: diclo k
+cantidad: 4
+Total a pagar: 960
+--------------------------
+
+
+   FarmaProg
+---------------------
+   Venta
+---------------------
+Medicamento
+---------------------
+Fecha: 14/4/2023
+---------------------
+cliente: Samuel
+Codigo: 16
+producto: 15
+cantidad: 4
+Total a pagar: 280
+--------------------------
+
+
+   FarmaProg
+---------------------
+   Venta
+---------------------
+Medicamento
+---------------------
+Fecha: 14/4/2023
+---------------------
+cliente: Carlos
+Codigo: 15
+producto: Acetomenofen
+cantidad: 3
+Total a pagar: 210
+--------------------------
+
+
+   FarmaProg
+---------------------
+   Venta
+---------------------
+Medicamento
+---------------------
+Fecha: 14/4/2023
+---------------------
+cliente: Carlos
+Codigo: 12
+producto: diclo k
+cantidad: 3
+Total a pagar: 300
+--------------------------
+
+

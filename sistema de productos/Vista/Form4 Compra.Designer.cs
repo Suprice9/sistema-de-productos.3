@@ -183,7 +183,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(701, 465);
+            this.dataGridView1.Size = new System.Drawing.Size(701, 429);
             this.dataGridView1.TabIndex = 11;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -407,7 +407,7 @@
             // btnMostrarCompra
             // 
             this.btnMostrarCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMostrarCompra.Location = new System.Drawing.Point(97, 474);
+            this.btnMostrarCompra.Location = new System.Drawing.Point(43, 467);
             this.btnMostrarCompra.Margin = new System.Windows.Forms.Padding(2);
             this.btnMostrarCompra.Name = "btnMostrarCompra";
             this.btnMostrarCompra.Size = new System.Drawing.Size(122, 31);

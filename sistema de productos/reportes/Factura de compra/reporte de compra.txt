@@ -955,3 +955,57 @@ Fecha de vencimiento: 22/4/2023 12:00:00 a. m.
 --------------------------
 
 
+   FarmaProg 
+---------------------
+Compra de medicamentos para abastecer la farmacia
+---------------------
+Medicamentos
+---------------------
+Fecha: 14/4/2023
+---------------------
+Suplidor: 10
+Producto: Acetomenofen
+Descripcion: dolor de cabeza
+cantidad: 3
+Precio de compra: 70
+Precio de venta: 50
+Fecha de vencimiento: 8/3/2023 12:00:00 a. m.
+--------------------------
+
+
+   FarmaProg 
+---------------------
+Compra de medicamentos para abastecer la farmacia
+---------------------
+Medicamentos
+---------------------
+Fecha: 14/4/2023
+---------------------
+Suplidor: 11
+Producto: Acetomenofen
+Descripcion: dolor de cabeza
+cantidad: 5
+Precio de compra: 70
+Precio de venta: 50
+Fecha de vencimiento: 8/3/2023 12:00:00 a. m.
+--------------------------
+
+
+   FarmaProg 
+---------------------
+Compra de medicamentos para abastecer la farmacia
+---------------------
+Medicamentos
+---------------------
+Fecha: 14/4/2023
+---------------------
+Suplidor: 11
+Producto: diclo k
+Descripcion: una
+cantidad: 4
+Precio de compra: 100
+Precio de venta: 50
+Fecha de vencimiento: 4/8/2023 12:00:00 a. m.
+--------------------------
+
+

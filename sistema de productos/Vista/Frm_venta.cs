@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using sistema_de_productos.Vista;
+using sistema_de_productos.Controlador;
 
 namespace sistema_de_productos.Vista
 {
@@ -41,44 +42,102 @@ namespace sistema_de_productos.Vista
         }
         //s
         int Fila = 0;
+
+
+
+        public void InsertarVenta(List<Venta> v)
+        {
+            string connectionString = "server=localhost;user id=root;password=;database=farmaprog";
+            MySqlConnection conexion = new MySqlConnection(connectionString);
+            conexion.Open();
+
+            foreach (Venta fact in v)
+            {
+                string query = "Insert into venta(nombrecliente,nombreproduct,preciovent,Cantidad,Total) VALUES(@nombrecliente, @nombreproduct,@preciovent,@Cantidad, @Total)";
+
+                MySqlCommand cmd = new MySqlCommand(query, conexion);
+
+                // Asignar los valores a los parámetros de consulta
+                cmd.Parameters.AddWithValue("@nombrecliente",TxtNombreCliente.Text );
+                cmd.Parameters.AddWithValue("@nombreproduct", fact.Nombreproducto);
+                cmd.Parameters.AddWithValue("@preciovent", fact.PrecioVenta);
+                cmd.Parameters.AddWithValue("@Cantidad", fact.Cantidad);
+                cmd.Parameters.AddWithValue("@Total",suma);
+
+
+                //inidcicamos donde querenos guardar el archivo que sera nuestro reporte
+                StreamWriter escribir = new StreamWriter(@"E:\Programas\sistema-de-productos.2-Pruebas2\sistema de productos\reportes\Factura de venta\reporte de venta.txt", true);
+                try
+                {
+                    escribir.WriteLine("   FarmaProg");
+                    escribir.WriteLine("---------------------");
+                    escribir.WriteLine("   Venta");
+                    escribir.WriteLine("---------------------");
+                    escribir.WriteLine("Medicamento");
+                    escribir.WriteLine("---------------------");
+                    escribir.WriteLine("Fecha: " + lblFecha.Text);
+                    escribir.WriteLine("---------------------");
+                    escribir.WriteLine("cliente: " + TxtNombreCliente.Text);
+                    escribir.WriteLine("Codigo: " + fact.Codigodeproducto);
+                    escribir.WriteLine("producto: " + fact.Nombreproducto);
+                    escribir.WriteLine("cantidad: " + fact.Cantidad);
+                    escribir.WriteLine("Total a pagar: " + suma);
+
+
+                    escribir.WriteLine("--------------------------");
+                    escribir.WriteLine("\n");
+                }
+                catch
+                {
+                    //mensaje error
+                    MessageBox.Show("error");
+                }
+                //cerramos proceso
+                escribir.Close();
+
+                cmd.ExecuteNonQuery();
+            }
+
+
+            conexion.Close();
+        }
         private void button2_Click(object sender, EventArgs e) // este boton es de realizar  la venta
                                                                //mostrara un mensaje en pantalla diciendo 
-        {   
+        {
+            List<Venta> factven = new List<Venta>();
+
+
+            foreach (DataGridViewRow filas in dataGridView1.Rows)
+            {
+                Venta fact = new Venta();
+
+                if (filas.Cells[0].Value != null)
+                {
+                    fact.Codigodeproducto = (string)filas.Cells[0].Value;
+                    fact.Nombreproducto = (string)filas.Cells[1].Value;
+                    fact.PrecioVenta = (string)filas.Cells[2].Value;
+                    fact.Stock = (string)filas.Cells[3].Value;
+                    fact.Cantidad=(decimal)filas.Cells[5].Value;
+
+                    factven.Add(fact);
+
+                }
+
+
+
+            }
+
+            InsertarVenta(factven);
+
 
             MessageBox.Show("Se ha Realizado Exitosamente");
 
-            //inidcicamos donde querenos guardar el archivo que sera nuestro reporte
-            StreamWriter escribir = new StreamWriter(@"E:\Programas\sistema-de-productos.2-Pruebas2\sistema de productos\reportes\Factura de venta\reporte de venta.txt", true);
-            try
-            {
-                escribir.WriteLine("   FarmaProg");
-                escribir.WriteLine("---------------------");
-                escribir.WriteLine("   Venta");
-                escribir.WriteLine("---------------------");
-                escribir.WriteLine("Medicamento");
-                escribir.WriteLine("---------------------");
-                escribir.WriteLine("Fecha: " + lblFecha.Text);
-                escribir.WriteLine("---------------------");
-                escribir.WriteLine("cliente: " + TxtNombreCliente.Text);
-                escribir.WriteLine("Codigo: " + txtCodigo.Text);
-                escribir.WriteLine("producto: " + txtNombreProducto.Text);
-                escribir.WriteLine("cantidad: " + numerictext.Text);
-                escribir.WriteLine("Total a pagar: " + suma);
-
-
-                escribir.WriteLine("--------------------------");
-                escribir.WriteLine("\n");
-            }
-            catch
-            {
-                //mensaje error
-                MessageBox.Show("error");
-            }
-            //cerramos proceso
-            escribir.Close();
 
             MessageBox.Show("Se ha guardado el reporte de esta venta ");
+            panel1.ResetText();
+            panel2.ResetText();
 
+            dataGridView1.Rows.Clear();
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e) //parte donde se introduce el efectivo para que haga el descuento
