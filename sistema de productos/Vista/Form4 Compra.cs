@@ -117,9 +117,6 @@ namespace sistema_de_productos
                 //cerramos proceso
                 escribir.Close();
             }
-            
-
-
 
             conexion.Close();
         }
@@ -170,7 +167,10 @@ namespace sistema_de_productos
                 MessageBox.Show("Se ha guardado el reporte de esta compra ");
                 //---------------------------------------------------------------------------------------
                 dataGridView1.Rows.Clear();
-            }
+
+            TextReader leer = new StreamReader(@"E:\Programas\sistema-de-productos.2-Pruebas2\sistema de productos\reportes\Factura de compra\reporte de compra.txt", true);
+            MessageBox.Show(leer.ReadToEnd());
+        }
         
 
         public void limpiar()
@@ -241,8 +241,13 @@ namespace sistema_de_productos
         private void btnMostrarCompra_Click(object sender, EventArgs e)
         {
 
-            TextReader leer = new StreamReader(@"E:\Programas\sistema-de-productos.2-Pruebas2\sistema de productos\reportes\Factura de compra\reporte de compra.txt", true);
-            MessageBox.Show(leer.ReadToEnd());
+            /*TextReader leer = new StreamReader(@"E:\Programas\sistema-de-productos.2-Pruebas2\sistema de productos\reportes\Factura de compra\reporte de compra.txt", true);
+            MessageBox.Show(leer.ReadToEnd());*/
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
     }

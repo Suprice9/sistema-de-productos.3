@@ -335,3 +335,35 @@ Total a pagar: 300
 --------------------------
 
 
+   FarmaProg
+---------------------
+   Venta
+---------------------
+Medicamento
+---------------------
+Fecha: 14/4/2023
+---------------------
+cliente: Saul
+Codigo: 16
+producto: 15
+cantidad: 3
+Total a pagar: 490
+--------------------------
+
+
+   FarmaProg
+---------------------
+   Venta
+---------------------
+Medicamento
+---------------------
+Fecha: 14/4/2023
+---------------------
+cliente: Saul
+Codigo: 15
+producto: Acetomenofen
+cantidad: 4
+Total a pagar: 490
+--------------------------
+
+
