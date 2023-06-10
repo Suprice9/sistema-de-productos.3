@@ -20,9 +20,11 @@ namespace sistema_de_productos.Vista
             InitializeComponent();
         }
 
+      
         private void Form7_Login_Load(object sender, EventArgs e)
         {
 
+            TxtContraseña.PasswordChar = Convert.ToChar("*");
         }
 
         private void btnIniciar_Seccion_Click(object sender, EventArgs e)
@@ -39,6 +41,7 @@ namespace sistema_de_productos.Vista
 
             string usuario = txtUsuario.Text;
             string contrasena = TxtContraseña.Text;
+
 
             //Verifica si no tiene datos
             String mensajeError = "";
@@ -82,6 +85,9 @@ namespace sistema_de_productos.Vista
                 MessageBox.Show("Usuario o contraseña incorrecto");
 
             }
+            txtUsuario.Clear();
+            TxtContraseña.Clear();
+
            conexion.Close();
 
         }
@@ -93,6 +99,11 @@ namespace sistema_de_productos.Vista
         }
 
         private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        
+        private void TxtContraseña_TextChanged(object sender, EventArgs e)
         {
 
         }

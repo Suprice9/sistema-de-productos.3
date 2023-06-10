@@ -65,6 +65,7 @@
             // 
             resources.ApplyResources(this.TxtContraseña, "TxtContraseña");
             this.TxtContraseña.Name = "TxtContraseña";
+            this.TxtContraseña.TextChanged += new System.EventHandler(this.TxtContraseña_TextChanged);
             // 
             // btnIniciar_Seccion
             // 
@@ -112,9 +113,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.TextBox TxtContraseña;
         private System.Windows.Forms.Button btnIniciar_Seccion;
         private System.Windows.Forms.Button btnRegistro;
         private System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.TextBox TxtContraseña;
     }
 }

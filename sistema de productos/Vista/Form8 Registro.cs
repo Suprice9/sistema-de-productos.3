@@ -51,6 +51,8 @@ namespace sistema_de_productos.Vista
             MySqlCommand cmd = new MySqlCommand(query,conexion);
             int n =cmd.ExecuteNonQuery();
 
+
+
             
 
             if (n>-1)

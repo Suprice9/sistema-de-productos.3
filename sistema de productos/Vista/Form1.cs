@@ -68,8 +68,7 @@ namespace sistema_de_productos
 
         private void barratitulo_MouseDown(object sender, MouseEventArgs e)
         {
-            ReleaseCapture();
-            //SendMessage(this.Handle, 0x112, 0xf012, 0); //el error que aparece cuando se arrastra se controlo aqui
+            
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
@@ -131,6 +130,38 @@ namespace sistema_de_productos
             formulario.Show();
         }
 
-        
+        bool vai = false;
+        private void panelcontenedor_MouseDown(object sender, MouseEventArgs e)
+        {
+            vai = true;
+        }
+
+        private void panelcontenedor_MouseUp(object sender, MouseEventArgs e)
+        {
+            vai = false;
+        }
+
+        private void panelcontenedor_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (vai = true)
+            {
+                this.Location=Cursor.Position;
+            }
+        }
+
+        private void panelcontenedor_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void menuvertical_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

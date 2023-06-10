@@ -138,6 +138,8 @@ namespace sistema_de_productos.Vista
             panel2.ResetText();
 
             dataGridView1.Rows.Clear();
+            TextReader leer = new StreamReader(@"E:\Programas\sistema-de-productos.2-Pruebas2\sistema de productos\reportes\Factura de venta\reporte de venta.txt");
+            MessageBox.Show(leer.ReadToEnd());
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e) //parte donde se introduce el efectivo para que haga el descuento

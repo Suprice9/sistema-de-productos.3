@@ -17,7 +17,7 @@ namespace sistema_de_productos
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1()) ;//--formulario de registro esta aqui
+            Application.Run(new Vista.Form7_login()) ;//--formulario de registro esta aqui
 
             //Application.Run(new Form1());// aqui abre el primer formulario
         }

@@ -30,7 +30,7 @@ namespace sistema_de_productos.Vista
             
             {
                 //inidcicamos donde querenos guardar el archivo que sera nuestro reporte
-                StreamWriter escribir = new StreamWriter(@"E:\Programas\FarmaProg-master2\sistema de productos\reportes\Reporte de medicamentos\reportes.txt", true);
+                StreamWriter escribir = new StreamWriter(@"E:\Programas\sistema-de-productos.2-Pruebas2\sistema de productos\reportes\Reporte de medicamentos\reportes.txt", true);
                 try
                 {
                     escribir.WriteLine("Medicamento");
@@ -51,7 +51,7 @@ namespace sistema_de_productos.Vista
 
                 /*
                 --------------------este es el 2------------
-string texto1 = textBox2.Text;//este esta nitido es que voy a probar otro
+string      texto1 = textBox2.Text;//este esta nitido es que voy a probar otro
                 string texto = textBox1.Text;
                 string nombreArchivo = "texto.txt";
                 string rutaCarpeta = @"C:\Users\enman\Desktop\Nueva carpeta\FarmaProg-master\sistema de productos\reportes"; // Reemplaza con la ruta de la carpeta donde quieras guardar el archivo
@@ -64,6 +64,12 @@ string texto1 = textBox2.Text;//este esta nitido es que voy a probar otro
                 string archivo = "texto.txt";
                 System.IO.File.WriteAllText(archivo, texto);*/
                 MessageBox.Show("se ha guardado el reporte que hizo ");
+
+                txt_reporte_n.Clear();
+                txt_reporte_mg.Clear();
+                txt_reporte_ml.Clear();
+                txt_reporte_u.Clear();
+
             }
         }
 

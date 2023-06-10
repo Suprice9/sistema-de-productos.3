@@ -25,3 +25,12 @@ Cuantas Unidades: 50
 --------------------------
 
 
+Medicamento
+↓↓↓↓↓↓↓↓↓↓↓
+nombre: acetomenofen
+De cuantos Mg: 
+De cuantos ml: 50
+Cuantas Unidades: 5
+--------------------------
+
+
